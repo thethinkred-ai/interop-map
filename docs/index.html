@@ -41,6 +41,8 @@ section.match h2{margin:0 0 4px;font-size:20px;color:var(--ink)}
 #report{margin-top:14px;font-size:14px;white-space:pre-wrap;background:var(--bg);border-radius:10px;padding:14px;display:none}
 .mapbox{background:#fff;border:1px solid var(--border);border-radius:14px;padding:20px;margin:20px 0}
 .mapbox h2{margin:0 0 4px;font-size:20px;color:var(--ink)}
+.catchk{display:inline-flex;align-items:center;gap:5px;font-size:13px;color:var(--text);cursor:pointer;background:#f3f4f6;border-radius:8px;padding:4px 10px}
+.catchk input{accent-color:var(--red);margin:0}
 .mapctl{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:12px 0}
 .mapctl select{flex:1;min-width:240px;padding:9px 12px;border:1px solid var(--border);border-radius:8px;font-size:14px}
 #layout{width:100%;height:auto;display:block;background:linear-gradient(#fff, #fbfbfd);border:1px solid var(--border);border-radius:10px}
@@ -111,6 +113,16 @@ footer{margin:40px 0 30px;color:var(--muted);font-size:13px;border-top:1px solid
       <div class="mapctl">
         <input id="limitN" type="range" min="10" max="210" step="1" value="60" style="flex:1;min-width:240px;accent-color:var(--red)">
         <span style="font-size:13px;color:var(--muted);min-width:170px">показывать: <b id="limitVal">60</b> из <span id="limitMax"></span> ближайших</span>
+      </div>
+      <div class="mapctl" id="catChks">
+        <span style="font-size:13px;color:var(--muted)">категории:</span>
+        <label class="catchk"><input type="checkbox" class="catChk" value="A" checked> <b style="color:#16a34a">А</b> первоочередной</label>
+        <label class="catchk"><input type="checkbox" class="catChk" value="B" checked> <b style="color:#ca8a04">Б</b> перспективный</label>
+        <label class="catchk"><input type="checkbox" class="catChk" value="C" checked> <b style="color:#f97316">В</b> точечные кампании</label>
+        <label class="catchk"><input type="checkbox" class="catChk" value="D" checked> <b style="color:#3b82f6">Г</b> наблюдение</label>
+        <label class="catchk"><input type="checkbox" class="catChk" value="E" checked> <b style="color:#dc2626">Д</b> не взаимодействуем</label>
+        <label class="catchk"><input type="checkbox" class="catChk" value="?" checked> без категории</label>
+        <button id="catAll" type="button" style="border:0;background:none;color:var(--red);font-size:13px;cursor:pointer;text-decoration:underline">выбрать все</button>
       </div>
       <svg id="layout" viewBox="0 0 1000 700" role="img" aria-label="Организациоцентричная карта взаимодействия"></svg>
       <div class="legend">
@@ -262,8 +274,13 @@ function drawMap(){
   var cx=500, cy=390, Rmin=95, Rmax=345;
   var center = byId[document.getElementById('centerSel').value];
   var N = parseInt(document.getElementById('limitN').value, 10) || 60;
+  var catOn = {};
+  document.querySelectorAll('.catChk').forEach(function(c){ if(c.checked) catOn[c.value]=1; });
+  var others = DATA.orgs.filter(function(o){
+    return o.id!==center.id && !o.restricted && catOn[o.category||'?'];
+  });
   document.getElementById('limitVal').textContent = N;
-  var others = DATA.orgs.filter(function(o){return o.id!==center.id && !o.restricted;});
+  document.getElementById('limitMax').textContent = others.length;
   var scoredAll = others.map(function(o){return {o:o, sc:scorePair(center, o)};});
   scoredAll.sort(function(x,y){return y.sc.score-x.sc.score || (x.o.name<y.o.name?-1:1);});
   var scored = scoredAll.slice(0, N);
@@ -349,6 +366,11 @@ function toMatch(aid, bid){
 }
 document.getElementById('centerSel').addEventListener('change', drawMap);
 document.getElementById('limitN').addEventListener('input', drawMap);
+document.querySelectorAll('.catChk').forEach(function(c){ c.addEventListener('change', drawMap); });
+document.getElementById('catAll').addEventListener('click', function(){
+  document.querySelectorAll('.catChk').forEach(function(c){ c.checked = true; });
+  drawMap();
+});
 document.getElementById('limitMax').textContent = DATA.orgs.filter(function(o){return !o.restricted;}).length - 1;
 
 /* ---------- виды и список ---------- */
