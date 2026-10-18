@@ -85,25 +85,32 @@ def match(a, b):
 
 
 def draft_letter(a, b, formats, common_acts):
-    offer = FMT.get(formats[0], formats[0]) if formats else 'открытая дискуссия'
-    acts_ru = ', '.join(ACT.get(x, x) for x in common_acts[:2]) or 'деятельность в смежных направлениях'
-    return (
-        'Здравствуйте, {b}!\n'
-        '\n'
-        'Мы — {a} ({site}). Изучили ваши открытые материалы и видим общее поле: '
-        '{acts}.\n'
-        '\n'
-        'Предлагаем начать с малого и конкретного: {offer}. Наш вклад — {our_offer}; '
-        'что было бы полезно от вас?\n'
-        '\n'
-        'Если тема интересна — ответьте, и согласуем формат и сроки.'
-    ).format(
-        b=b['identity']['name'], a=a['identity']['name'],
-        site=(a.get('channels') or {}).get('site', ''),
-        acts=acts_ru,
-        offer=offer.lower(),
-        our_offer=((a.get('cooperation') or {}).get('offers') or [{}])[0].get('description', 'материалы и площадка'),
-    )
+    """Черновик первого обращения.
+
+    Не приписывает сторонам того, чего нет в паспорте: если вклада или общего
+    поля в данных нет — остаётся явная пометка для заполнения, а не выдумка.
+    """
+    offer_fmt = FMT.get(formats[0], formats[0]) if formats else None
+    acts_ru = ', '.join(ACT.get(x, x) for x in common_acts[:2])
+    offers = (a.get('cooperation') or {}).get('offers') or []
+    our_offer = next((o.get('description') for o in offers
+                      if o.get('format') == formats[0]), None) if formats else None
+
+    L = ['Здравствуйте, %s!' % b['identity']['name'], '']
+    L.append('Мы — %s (%s).' % (a['identity']['name'],
+                                (a.get('channels') or {}).get('site') or 'наш сайт'))
+    if acts_ru:
+        L.append('В ваших открытых материалах и нашей работе есть общее поле: %s.' % acts_ru)
+    if offer_fmt:
+        L.append('Предлагаем начать с малого и конкретного: %s.' % offer_fmt.lower())
+    if our_offer:
+        L.append('Наш вклад — %s.' % our_offer.rstrip('.'))
+    else:
+        L.append('Наш вклад: [указать, что конкретно готовы дать — в паспорте это не зафиксировано].')
+    L.append('Что было бы полезно от вас?')
+    L.append('')
+    L.append('Если тема интересна — ответьте, и согласуем формат и сроки.')
+    return '\n'.join(L)
 
 
 def render_text(r):
@@ -152,8 +159,15 @@ def main(argv):
     if len(args) != 2:
         print(__doc__)
         return 2
-    orgs = load_orgs()
+    all_orgs = load_orgs()
+    # restricted не участвует в матчинге: паспорт скрыт, в реестре только строка «существует»
+    restricted = {k for k, v in all_orgs.items()
+                  if (v.get('visibility') or {}).get('level') == 'restricted'}
+    orgs = {k: v for k, v in all_orgs.items() if k not in restricted}
     for x in args:
+        if x in restricted:
+            print('%s: паспорт ограничен (visibility=restricted) — матч-отчёт не строится' % x)
+            return 2
         if x not in orgs:
             print('Не найдено: %s' % x)
             return 2

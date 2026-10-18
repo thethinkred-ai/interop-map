@@ -472,12 +472,22 @@ render();
 '''
 
 
+def js_json(obj):
+    """JSON для вставки внутрь <script>: экранирует всё, чем можно вырваться."""
+    return (json.dumps(obj, ensure_ascii=False)
+            .replace('<', '\\u003c')
+            .replace('>', '\\u003e')
+            .replace('&', '\\u0026')
+            .replace('\u2028', '\\u2028')
+            .replace('\u2029', '\\u2029'))
+
+
 def main():
     b = bundle()
     html = (HTML
-            .replace('__BUNDLE__', json.dumps(b, ensure_ascii=False))
-            .replace('__CATC__', json.dumps(CAT_COLORS, ensure_ascii=False))
-            .replace('__CATL__', json.dumps(CAT_LABELS, ensure_ascii=False))
+            .replace('__BUNDLE__', js_json(b))
+            .replace('__CATC__', js_json(CAT_COLORS))
+            .replace('__CATL__', js_json(CAT_LABELS))
             .replace('__MAXN__', str(sum(1 for o in b['orgs'] if not o.get('restricted')) - 1)))
     out = os.path.join(ROOT, 'docs', 'index.html')
     os.makedirs(os.path.dirname(out), exist_ok=True)

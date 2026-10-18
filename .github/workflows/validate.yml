@@ -1,0 +1,27 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Валидация данных и схем
+        run: python scripts/validate.py
+
+      - name: Сборка витрины детерминирована
+        run: |
+          python scripts/build_site.py
+          git diff --exit-code docs/index.html \
+            || (echo "::error::docs/index.html не соответствует данным — пересоберите и закоммитьте"; exit 1)
+
+      - name: Матч-отчёт не падает на реальной паре
+        run: python scripts/match.py ORG-000 ORG-029 > /dev/null
