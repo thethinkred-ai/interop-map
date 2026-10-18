@@ -22,6 +22,25 @@ CAT_LABELS = {'A': 'первоочередной контакт', 'B': 'перс
 COOPERATIVE_LINKS = {'joint_project', 'coalition', 'publication_exchange', 'joint_event',
                      'international_network'}
 
+# Гипотетический слой: сферы деятельности черновиков выводятся из раздела списка.
+# Это оценка «кто они есть», а не заявление организации — на витрине помечается.
+SECTION_ACTS = {
+    'Системные структуры': ['party_politics'],
+    'Несистемные коммунистические партии и движения': ['party_politics', 'grassroots_politics'],
+    'Несистемные левые и социалистические': ['grassroots_politics', 'party_politics'],
+    'Молодёжные организации': ['grassroots_politics', 'education'],
+    'Профсоюзы и рабочие объединения': ['trade_unions', 'labour_conflicts'],
+    'Международные партии и форматы': ['party_politics', 'events'],
+    'Медиа-проекты и площадки': ['media', 'publishing'],
+    'Русскоязычные YouTube-каналы': ['media', 'publishing'],
+    'Зарубежные каналы и медиапроекты': ['media', 'translation'],
+    'Telegram-каналы и блоги': ['media'],
+    'Библиотеки и архивы первоисточников': ['library_archive', 'publishing'],
+    'Образовательные проекты и школы': ['education', 'research'],
+    'ВКонтакте: сообщества': ['media', 'grassroots_politics'],
+    'Страны СНГ: организации и проекты': ['grassroots_politics', 'party_politics'],
+}
+
 
 def bundle():
     orgs = []
@@ -42,6 +61,7 @@ def bundle():
             'page_status': (rec.get('meta') or {}).get('page_status') or '',
             'notes': (rec.get('meta') or {}).get('notes') or '',
             'acts': [a.get('type') for a in rec.get('activities') or []],
+            'acts_inferred': [a for a in SECTION_ACTS.get((rec.get('meta') or {}).get('list_section') or '', [])],
             'offers': [(o.get('format'), o.get('description')) for o in (rec.get('cooperation') or {}).get('offers') or []],
             'seeks': [(o.get('format'), o.get('description')) for o in (rec.get('cooperation') or {}).get('seeks') or []],
             'positions': [(p.get('topic'), p.get('status')) for p in rec.get('positions') or []],
@@ -158,7 +178,7 @@ footer{margin:40px 0 30px;color:var(--muted);font-size:13px;border-top:1px solid
   <div id="viewMap" style="display:none">
     <div class="mapbox">
       <h2>Карта вокруг организации</h2>
-      <p style="margin:0;color:var(--muted);font-size:14px">Выберите организацию — она окажется в центре. Остальные расположены по радиусу: <b>ближе — больше заявленного результата взаимодействия</b>, дальше — меньше. Клик по точке — из чего складывается результат.</p>
+      <p style="margin:0;color:var(--muted);font-size:14px">Выберите организацию — она окажется в центре. Остальные расположены по радиусу: <b>ближе — выше гипотетический потенциал взаимодействия</b>, дальше — ниже. Клик по точке — из чего складывается потенциал.</p>
       <div class="mapctl">
         <select id="centerSel"></select>
         <span style="font-size:13px;color:var(--muted)">в центре</span>
@@ -172,8 +192,8 @@ footer{margin:40px 0 30px;color:var(--muted);font-size:13px;border-top:1px solid
         <span><i style="background:#dc2626"></i>публичный конфликт</span>
       </div>
       <div id="panel"></div>
-      <p class="mapnote">Расчёт — только по заявленным в паспортах данным: пересечение «предлагаю × ищу» (+2 за совпадение, до 6), общие типы деятельности (+1, до 3), общие темы с утверждёнными обеими сторонами позициями (+0.5, до 2.5), подтверждённая кооперативная связь (+2), оба паспорта утверждены (+1); максимум нормируется к 10.
-      Пустой паспорт даёт 0 — это «не известно», а не «не совместим». Карта не оценивает организации: она показывает, чьи паспорта уже говорят друг с другом.</p>
+      <p class="mapnote">Карта строится по <b>гипотетическому потенциалу</b> — какие форматы взаимодействия возможны для пары, судя по их ролям (образование, медиа, профсоюзы, библиотека…; для черновиков сферы выведены из раздела списка), усиленному заявленным в паспортах: возможные форматы по ролям (+1 за формат, до 5), общие сферы (+0.5, до 1.5), заявленная взаимодополняемость «предлагаю × ищу» (+2, до 6), общие темы с утверждёнными обеими сторонами позициями (+0.5, до 2.5), подтверждённая связь (+2), оба паспорта утверждены (+0.5); максимум нормируется к 10. Заявленные политические ограничения учитываются там, где существуют (статусы карты ThinkRed: «расхождения по методу» ограничивают потенциал точечными кампаниями, «не взаимодействуем» — почти обнуляют).
+      Это гипотеза для первого разговора, а не факт сотрудничества и не оценка политической совместимости: реальную совместимость устанавливают только сами организации.</p>
     </div>
   </div>
 
@@ -196,7 +216,7 @@ document.getElementById('mA').value='ORG-000';
 document.getElementById('mB').value='ORG-029';
 document.getElementById('centerSel').value='ORG-000';
 
-/* ---------- скоринг пары (заявленные данные, не вердикт) ---------- */
+/* ---------- сфер деятельности: заявленные + выведенные из раздела списка ---------- */
 function linkBetween(a, b){
   var r = null;
   DATA.connections.forEach(function(c){
@@ -204,30 +224,86 @@ function linkBetween(a, b){
   });
   return r;
 }
+function actsOf(o){
+  var s = {}; (o.acts||[]).forEach(function(x){s[x]=1;}); (o.acts_inferred||[]).forEach(function(x){s[x]=1;});
+  return s;
+}
+
+/* ---------- матрица «роль × роль → возможный формат» (гипотетический слой) ---------- */
+var FMT_MATRIX = [
+  [['education','media'],            'joint_seminar'],
+  [['education','publishing'],       'joint_collection'],
+  [['education','library_archive'],  'joint_collection'],
+  [['education','education'],        'joint_seminar'],
+  [['education','trade_unions'],     'joint_seminar'],
+  [['education','labour_conflicts'], 'joint_seminar'],
+  [['education','research'],         'joint_analytics'],
+  [['media','media'],                'exchange_publications'],
+  [['media','publishing'],           'exchange_publications'],
+  [['media','labour_conflicts'],     'labour_monitoring_exchange'],
+  [['media','trade_unions'],         'labour_monitoring_exchange'],
+  [['media','translation'],          'translation_project'],
+  [['publishing','library_archive'], 'joint_collection'],
+  [['publishing','translation'],     'translation_project'],
+  [['research','party_politics'],    'joint_analytics'],
+  [['research','research'],          'comparative_research'],
+  [['trade_unions','party_politics'],'joint_campaign'],
+  [['trade_unions','labour_conflicts'],'labour_monitoring_exchange'],
+  [['events','media'],               'joint_seminar'],
+  [['events','events'],              'conference'],
+  [['software','education'],         'caos_shared_goal'],
+  [['software','grassroots_politics'],'caos_shared_goal'],
+  [['software','party_politics'],    'caos_shared_goal'],
+  [['translation','library_archive'],'translation_project']
+];
+
+/* ---------- гипотетический потенциал пары (не вердикт, а оценка «что возможно») ---------- */
 function scorePair(a, b){
   var brk = [];
-  var nA = {}, nB = {};
+  var A = actsOf(a), B = actsOf(b);
+  // 1) гипотетические форматы по ролям
+  var hypFormats = [];
+  FMT_MATRIX.forEach(function(rule){
+    var p = rule[0];
+    if((A[p[0]] && B[p[1]]) || (B[p[0]] && A[p[1]])){
+      if(hypFormats.indexOf(rule[1])<0) hypFormats.push(rule[1]);
+    }
+  });
+  if(hypFormats.length) brk.push({label:'Возможные форматы по ролям (гипотеза): '+hypFormats.map(function(f){return FMT[f]||f;}).join(', '), pts:Math.min(5, hypFormats.length)});
+  // 2) общие сферы — потенциал «ровесного» сотрудничества
+  var sharedActs = Object.keys(A).filter(function(x){return B[x];});
+  if(sharedActs.length) brk.push({label:'Общие сферы деятельности: '+sharedActs.map(function(x){return ACT[x]||x;}).join(', '), pts:Math.min(1.5, 0.5*sharedActs.length)});
+  // 3) заявленная взаимодополняемость (факт, усиливает гипотезу)
+  var nA={}, nB={};
   (a.offers||[]).forEach(function(x){nA[x[0]]=1;}); (b.seeks||[]).forEach(function(x){nB[x[0]]=1;});
   var comp = Object.keys(nA).filter(function(f){return nB[f];}).length;
   nA={}; nB={};
   (b.offers||[]).forEach(function(x){nA[x[0]]=1;}); (a.seeks||[]).forEach(function(x){nB[x[0]]=1;});
   comp += Object.keys(nA).filter(function(f){return nB[f];}).length;
-  if(comp) brk.push({label:'Взаимодополняемость: «предлагаю × ищу», совпадений: '+comp, pts:Math.min(6, 2*comp)});
-  var actsA={}, common=0;
-  (a.acts||[]).forEach(function(x){actsA[x]=1;});
-  (b.acts||[]).forEach(function(x){if(actsA[x])common++;});
-  if(common) brk.push({label:'Общие типы деятельности: '+common, pts:Math.min(3, common)});
-  var pa={}, pb={}, shared=0;
+  if(comp) brk.push({label:'Заявленная взаимодополняемость («предлагаю × ищу»): совпадений '+comp, pts:Math.min(6, 2*comp)});
+  // 4) общие темы с утверждёнными позициями
+  var pa={}, pb={};
   (a.positions||[]).forEach(function(p){if(p[1]==='asserted')pa[p[0]]=1;});
   (b.positions||[]).forEach(function(p){if(p[1]==='asserted')pb[p[0]]=1;});
-  shared = Object.keys(pa).filter(function(t){return pb[t];}).length;
-  if(shared) brk.push({label:'Общие темы с утверждёнными позициями обеих сторон: '+shared, pts:Math.min(2.5, 0.5*shared)});
+  var shared = Object.keys(pa).filter(function(t){return pb[t];});
+  if(shared.length) brk.push({label:'Общие темы с утверждёнными обеими сторонами позициями: '+shared.length, pts:Math.min(2.5, 0.5*shared.length)});
+  // 5) связь
   var link = linkBetween(a.id, b.id);
   if(link && link.coop) brk.push({label:'Подтверждённая кооперативная связь', pts:2});
-  if(a.asserted && b.asserted) brk.push({label:'Оба паспорта утверждены организациями', pts:1});
+  // 6) утверждённость паспортов
+  if(a.asserted && b.asserted) brk.push({label:'Оба паспорта утверждены организациями', pts:0.5});
   var raw = brk.reduce(function(s,x){return s+x.pts;},0);
-  return {score: Math.round(Math.min(10, raw/14.5*10)*10)/10, brk: brk, link: link,
-          conflict: link && !link.coop};
+  // 7) заявленные политические ограничения (только политики ThinkRed, где применимы)
+  var cap = 10, capNote = null;
+  function other(o){return o.id==='ORG-000';}
+  if(other(a)||other(b)){
+    var x = other(a)? b : a;
+    if(/Не взаимодействуем/i.test(x.page_status||'')){ cap=1.5; capNote='Политика ThinkRed: «не взаимодействуем» — потенциал ограничен'; }
+    else if(/Расхождения по методу/i.test(x.page_status||'')){ cap=4; capNote='Политика ThinkRed: «расхождения по методу» — только точечные кампании'; }
+  }
+  var score = Math.round(Math.min(cap, raw/18.5*10)*10)/10;
+  return {score:score, brk:brk, link:link, conflict:link&&!link.coop,
+          hypFormats:hypFormats, capNote:capNote, capped:score>=cap&&raw/18.5*10>cap};
 }
 
 /* ---------- матч-отчёт ---------- */
@@ -236,43 +312,41 @@ function doMatch(){
   var sc = scorePair(a,b);
   var pa={}, pb={}; (a.positions||[]).forEach(function(p){if(p[1]==='asserted')pa[p[0]]=1;}); (b.positions||[]).forEach(function(p){if(p[1]==='asserted')pb[p[0]]=1;});
   var both=Object.keys(pa).filter(function(t){return pb[t];});
-  var actsA={}; (a.acts||[]).forEach(function(x){actsA[x]=1;});
-  var common=(a.acts||[]).filter(function(x){return actsA[x];});
-  var formats = sc.brk.filter(function(x){return x.label.indexOf('Взаимодополняемость')===0;}).length ? [] : [];
-  var compFormats = [];
+  var A=actsOf(a), B=actsOf(b);
+  var common=Object.keys(A).filter(function(x){return B[x];});
   var oA={}, oB={};
   (a.offers||[]).forEach(function(x){oA[x[0]]=1;}); (b.seeks||[]).forEach(function(x){oB[x[0]]=1;});
-  Object.keys(oA).forEach(function(f){if(oB[f] && compFormats.indexOf(f)<0)compFormats.push(f);});
+  var compFormats = Object.keys(oA).filter(function(f){return oB[f];});
   oA={};oB={};
   (b.offers||[]).forEach(function(x){oA[x[0]]=1;}); (a.seeks||[]).forEach(function(x){oB[x[0]]=1;});
-  Object.keys(oA).forEach(function(f){if(oB[f] && compFormats.indexOf(f)<0)compFormats.push(f);});
-  formats = compFormats.slice();
-  [[['labour_conflicts','trade_unions'],'labour_monitoring_exchange'],[['publishing','media'],'exchange_publications'],[['research'],'joint_analytics'],[['education'],'joint_seminar'],[['translation'],'translation_project'],[['events'],'open_discussion'],[['software'],'caos_shared_goal']].forEach(function(rule){
-    if((rule[0].some(function(x){return actsA[x];})) && (rule[0].some(function(x){return (b.acts||[]).indexOf(x)>=0;})) && formats.indexOf(rule[1])<0) formats.push(rule[1]);
-  });
+  compFormats = compFormats.concat(Object.keys(oA).filter(function(f){return oB[f];}));
+  var formats = compFormats.concat(sc.hypFormats.filter(function(f){return compFormats.indexOf(f)<0;}));
   if(!formats.length) formats=['open_discussion'];
   var L=[];
-  L.push('МАТЧ-ОТЧЁТ: '+a.name+' ('+a.id+') ↔ '+b.name+' ('+b.id+')   ·   результат взаимодействия по заявленным данным: '+sc.score+'/10');
+  L.push('МАТЧ-ОТЧЁТ: '+a.name+' ('+a.id+') ↔ '+b.name+' ('+b.id+')   ·   потенциал взаимодействия: '+sc.score+'/10');
   L.push('Статус паспортов: '+a.name+' — '+(a.asserted?'утверждён':'черновик')+'; '+b.name+' — '+(b.asserted?'утверждён':'черновик'));
-  if(sc.brk.length){L.push('Из чего складывается результат:'); sc.brk.forEach(function(x){L.push('  +'+x.pts+' — '+x.label);});}
-  else L.push('Результат 0: паспорта молчат — это «не известно», а не «не совместим».');
-  if(sc.conflict) L.push('ВНИМАНИЕ: между организациями зафиксирован публичный конфликт — счёт его не учитывает, но он показан.');
+  if(sc.brk.length){L.push('Из чего складывается потенциал:'); sc.brk.forEach(function(x){L.push('  +'+x.pts+' — '+x.label);});}
+  else L.push('Потенциал 0: не находится ни одного возможного формата по ролям и заявленным данным.');
+  if(sc.capNote) L.push('ОГРАНИЧЕНИЕ: '+sc.capNote+'.');
+  if(sc.conflict) L.push('ВНИМАНИЕ: между организациями зафиксирован публичный конфликт — он показан, но потенциал не описывает.');
   L.push('');
-  L.push('▌ Взаимодополняемость (предложения × запросы):');
+  L.push('▌ Заявленная взаимодополняемость (предложения × запросы):');
   L.push('  '+(compFormats.length?compFormats.map(function(f){return FMT[f]||f;}).join(', '):'не заявлена'));
+  L.push('');
+  L.push('▌ Возможные форматы по ролям (гипотеза): '+(sc.hypFormats.length?sc.hypFormats.map(function(f){return FMT[f]||f;}).join(', '):'не найдено'));
   L.push('');
   L.push('▌ Общие темы с утверждёнными позициями обеих сторон: '+both.length);
   both.forEach(function(t){L.push('  • '+(TOPIC[t]||t)+' → сопоставьте формулировки в паспортах; расхождение — предмет разговора');});
   L.push('');
-  L.push('▌ Общая деятельность: '+(common.length?common.map(function(x){return ACT[x]||x;}).join(', '):'не заявлена'));
+  L.push('▌ Общие сферы деятельности: '+(common.length?common.map(function(x){return ACT[x]||x;}).join(', '):'не найдено'));
   L.push('');
-  L.push('▌ Рекомендованные форматы первого проекта:');
+  L.push('▌ Рекомендованные форматы первого проекта (заявленное + возможное):');
   formats.forEach(function(f){L.push('  – '+(FMT[f]||f));});
   L.push('');
   L.push('▌ Черновик первого обращения:');
-  L.push('«Здравствуйте, '+b.name+'! Мы — '+a.name+'. Изучили ваши открытые материалы и видим общее поле: '+(common.length?common.map(function(x){return ACT[x]||x;}).slice(0,2).join(', '):'смежная деятельность')+'. Предлагаем начать с малого: '+((FMT[formats[0]]||formats[0]).toLowerCase())+'. Наш вклад — '+((a.offers||[])[0]?a.offers[0][1]:'материалы и площадка')+'. Что было бы полезно от вас?»');
+  L.push('«Здравствуйте, '+b.name+'! Мы — '+a.name+'. Судя по вашим открытым материалам, у нас общее поле: '+(common.length?common.map(function(x){return ACT[x]||x;}).slice(0,2).join(', '):'смежная деятельность')+'. Предлагаем начать с малого: '+((FMT[formats[0]]||formats[0]).toLowerCase())+'. Наш вклад — '+((a.offers||[])[0]?a.offers[0][1]:'материалы и площадка')+'. Что было бы полезно от вас?»');
   L.push('');
-  L.push('Отчёт — сопоставление заявленного, а не приговор о совместимости.');
+  L.push('Потенциал — гипотеза по ролям и заявленным данным, а не приговор о совместимости.');
   var r=document.getElementById('report'); r.textContent=L.join('\\n'); r.style.display='block';
 }
 
@@ -290,7 +364,7 @@ function drawMap(){
   ringDefs.forEach(function(rd){
     var r = Rmin + (1 - rd[0]/10)*(Rmax-Rmin);
     parts.push('<circle cx="'+cx+'" cy="'+cy+'" r="'+r.toFixed(1)+'" fill="none" stroke="#e5e7eb" stroke-dasharray="3 5"/>');
-    parts.push('<text class="ringlbl" x="'+(cx+r+4)+'" y="'+(cy-4)+'">'+(rd[0]===10?'результат 10':rd[0])+'</text>');
+    parts.push('<text class="ringlbl" x="'+(cx+r+4)+'" y="'+(cy-4)+'">'+(rd[0]===10?'потенциал 10':'потенциал '+rd[0])+'</text>');
   });
   parts.push('<line x1="'+(cx-Rmax-10)+'" y1="'+cy+'" x2="'+(cx+Rmax+10)+'" y2="'+cy+'" stroke="#eef0f3"/>');
   parts.push('<line x1="'+cx+'" y1="'+(cy-Rmax-10)+'" x2="'+cx+'" y2="'+(cy+Rmax+10)+'" stroke="#eef0f3"/>');
@@ -313,10 +387,11 @@ function drawMap(){
       var o = byId[g.getAttribute('data-id')];
       var sc = scorePair(center, o);
       var p = document.getElementById('panel');
-      var h = '<b>'+o.name+'</b> <span style="color:var(--muted)">('+o.id+')</span> — результат взаимодействия с <b>'+center.name+'</b>: <b style="color:var(--red)">'+sc.score+'/10</b>';
+      var h = '<b>'+o.name+'</b> <span style="color:var(--muted)">('+o.id+')</span> — потенциал взаимодействия с <b>'+center.name+'</b>: <b style="color:var(--red)">'+sc.score+'/10</b>';
       if(sc.brk.length){ h += '<div style="margin-top:6px">'; sc.brk.forEach(function(x){h+='<div class="brk"><span>'+x.label+'</span><b>+'+x.pts+'</b></div>';}); h+='</div>'; }
-      else h += '<div style="margin-top:6px;color:var(--muted)">Паспорта не заявляют точек взаимодействия — заполните блоки «предлагаю/ищу», и карта оживёт.</div>';
-      if(sc.conflict) h += '<div style="margin-top:6px;color:#b91c1c">Зафиксирован публичный конфликт (в счёт не входит, показан для полноты).</div>';
+      else h += '<div style="margin-top:6px;color:var(--muted)">Не находится возможных форматов — данных о ролях слишком мало.</div>';
+      if(sc.capNote) h += '<div style="margin-top:6px;color:#b45309">'+sc.capNote+'.</div>';
+      if(sc.conflict) h += '<div style="margin-top:6px;color:#b91c1c">Зафиксирован публичный конфликт (в потенциал не входит, показан для полноты).</div>';
       h += '<div style="margin-top:10px"><button onclick="toMatch(\\''+center.id+'\\', \\''+o.id+'\\')" style="padding:7px 14px;background:var(--red);color:#fff;border:0;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer">Матч-отчёт '+center.name.slice(0,14)+' ↔ '+o.name.slice(0,14)+'</button></div>';
       p.innerHTML = h; p.style.display='block';
     });
@@ -360,7 +435,7 @@ function render(){
     var badge=o.asserted?'<span class="ok">паспорт утверждён</span>':'<span class="draft">черновик — не утверждён организацией</span>';
     var c=o.category?'<span class="cat" style="background:'+(CATC[o.category]||'#9ca3af')+'">Кат. '+o.category+' · '+CATL[o.category]+'</span>':'';
     d.innerHTML=badge+c+'<h3>'+esc(o.name)+'</h3><div class="meta">'+esc(o.id)+' · '+esc(o.section||'—')+(o.form?' · '+esc(o.form):'')+'</div>'
-      +(o.acts.length?'<p class="stat"><b>Деятельность:</b> '+o.acts.map(function(x){return ACT[x]||x;}).join(', ')+'</p>':'')
+      +(((o.acts||[]).concat(o.acts_inferred||[]).length)?'<p class="stat"><b>Сферы:</b> '+Object.keys((function(){var m={};(o.acts||[]).concat(o.acts_inferred||[]).forEach(function(x){m[x]=1;});return m;})()).map(function(x){return ACT[x]||x;}).join(', ')+((o.acts_inferred||[]).length && !(o.acts||[]).length?' <span style="color:var(--muted)">(по разделу списка)</span>':'')+'</p>':'')
       +(o.offers.length?'<p class="stat"><b>Предлагает:</b> '+o.offers.map(function(x){return FMT[x[0]]||x[0];}).join(', ')+'</p>':'')
       +(o.seeks.length?'<p class="stat"><b>Ищет:</b> '+o.seeks.map(function(x){return FMT[x[0]]||x[0];}).join(', ')+'</p>':'')
       +(o.site?'<a class="link" href="'+esc(o.site)+'" target="_blank" rel="noopener">Источник →</a>':'');
