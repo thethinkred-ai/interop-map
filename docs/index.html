@@ -114,6 +114,10 @@ footer{margin:40px 0 30px;color:var(--muted);font-size:13px;border-top:1px solid
         <input id="limitN" type="range" min="10" max="210" step="1" value="60" style="flex:1;min-width:240px;accent-color:var(--red)">
         <span style="font-size:13px;color:var(--muted);min-width:170px">показывать: <b id="limitVal">60</b> из <span id="limitMax"></span> ближайших</span>
       </div>
+      <div class="mapctl">
+        <select id="fSecMap" style="flex:1;min-width:240px"><option value="">Все разделы</option></select>
+        <span style="font-size:13px;color:var(--muted)">раздел</span>
+      </div>
       <div class="mapctl" id="catChks">
         <span style="font-size:13px;color:var(--muted)">категории:</span>
         <label class="catchk"><input type="checkbox" class="catChk" value="A" checked> <b style="color:#16a34a">А</b> первоочередной</label>
@@ -276,8 +280,10 @@ function drawMap(){
   var N = parseInt(document.getElementById('limitN').value, 10) || 60;
   var catOn = {};
   document.querySelectorAll('.catChk').forEach(function(c){ if(c.checked) catOn[c.value]=1; });
+  var secFilter = document.getElementById('fSecMap').value;
   var others = DATA.orgs.filter(function(o){
-    return o.id!==center.id && !o.restricted && catOn[o.category||'?'];
+    return o.id!==center.id && !o.restricted && catOn[o.category||'?']
+      && (!secFilter || o.section===secFilter);
   });
   document.getElementById('limitVal').textContent = N;
   document.getElementById('limitMax').textContent = others.length;
@@ -366,6 +372,11 @@ function toMatch(aid, bid){
 }
 document.getElementById('centerSel').addEventListener('change', drawMap);
 document.getElementById('limitN').addEventListener('input', drawMap);
+document.getElementById('fSecMap').addEventListener('change', drawMap);
+(function(){
+  var s = document.getElementById('fSecMap'), seen = {};
+  DATA.orgs.forEach(function(o){ if(o.section && !seen[o.section]){ seen[o.section]=1; var op=document.createElement('option'); op.value=o.section; op.textContent=o.section; s.appendChild(op); } });
+})();
 document.querySelectorAll('.catChk').forEach(function(c){ c.addEventListener('change', drawMap); });
 document.getElementById('catAll').addEventListener('click', function(){
   document.querySelectorAll('.catChk').forEach(function(c){ c.checked = true; });
