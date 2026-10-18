@@ -181,7 +181,7 @@ footer{margin:40px 0 30px;color:var(--muted);font-size:13px;border-top:1px solid
       <input id="q" type="search" placeholder="Поиск по названию…">
       <select id="fCat"><option value="">Все категории</option></select>
       <select id="fSec"><option value="">Все разделы</option></select>
-      <select id="fOnly"><option value="">Все паспорта</option><option value="asserted">Только утверждённые</option></select>
+      <select id="fOnly"><option value="">Все паспорта</option><option value="asserted">Только утверждённые</option><option value="cards">Только с карточкой исследования</option></select>
     </div>
     <p class="count" id="count"></p>
     <div class="grid" id="grid"></div>
@@ -190,7 +190,7 @@ footer{margin:40px 0 30px;color:var(--muted);font-size:13px;border-top:1px solid
   <div id="viewMap" style="display:none">
     <div class="mapbox">
       <h2>Карта вокруг организации</h2>
-      <p style="margin:0;color:var(--muted);font-size:14px">Выберите организацию — она окажется в центре. Остальные расположены по радиусу: <b>ближе — выше гипотетический потенциал взаимодействия</b>, дальше — ниже. Клик по точке — из чего складывается потенциал.</p>
+      <p style="margin:0;color:var(--muted);font-size:14px">Выберите организацию — она окажется в центре. Остальные расположены по радиусу: <b>ближе — выше гипотетический потенциал взаимодействия</b>, дальше — ниже. Клик по точке — из чего складывается потенциал; у организаций с красным пунктиром (есть карточка исследования) в панели появится блок «Что установили наши исследователи».</p>
       <div class="mapctl">
         <select id="centerSel"></select>
         <span style="font-size:13px;color:var(--muted)">в центре</span>
@@ -206,6 +206,7 @@ footer{margin:40px 0 30px;color:var(--muted);font-size:13px;border-top:1px solid
         <span><i style="background:#9ca3af"></i>черновик (не утверждён)</span>
         <span><i style="background:#f59e0b"></i>есть подтверждённая связь</span>
         <span><i style="background:#dc2626"></i>публичный конфликт</span>
+        <span><i style="background:none;border:1.6px dashed #c8102e;border-radius:50%"></i>есть карточка исследования</span>
       </div>
       <div id="panel"></div>
       <p class="mapnote">Карта строится по <b>гипотетическому потенциалу</b> — какие форматы взаимодействия возможны для пары, судя по их ролям (образование, медиа, профсоюзы, библиотека…; для черновиков сферы выведены из раздела списка), усиленному заявленным в паспортах: возможные форматы по ролям (+2 за формат, до 6), общие сферы (+1, до 4), заявленная взаимодополняемость «предлагаю × ищу» (+2, до 6), общие темы с утверждёнными обеими сторонами позициями (+1, до 3), подтверждённая связь (+2), оба паспорта утверждены (+1); нормировка к 10. Заявленные политические ограничения учитываются как потолок (статусы карты ThinkRed: «расхождения по методу» ограничивают потенциал точечными кампаниями, «не взаимодействуем» — почти обнуляют).
@@ -379,11 +380,13 @@ function drawMap(){
     var fill = it.o.asserted ? '#16a34a' : '#9ca3af';
     if(it.sc.link) fill = it.sc.link.coop ? '#f59e0b' : '#dc2626';
     var rad = it.o.asserted ? 8 : 6;
-    var showLbl = s>0 && labeled<22;
+    var hasCard = !!DATA.cards[it.o.id];
+    var showLbl = (s>0 || hasCard) && labeled<22;
     if(showLbl) labeled++;
     var right = x >= cx;
     parts.push('<g class="node" data-id="'+it.o.id+'">'
-      + '<circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="'+rad+'" fill="'+fill+'" stroke="#fff" stroke-width="1.5" opacity="0.92"><title>'+it.o.name+' — потенциал '+s+'/10</title></circle>'
+      + '<circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="'+rad+'" fill="'+fill+'" stroke="#fff" stroke-width="1.5" opacity="0.92"><title>'+it.o.name+' — потенциал '+s+'/10'+(hasCard?' · есть карточка исследования':'')+'</title></circle>'
+      + (hasCard ? '<circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="'+(rad+3.5)+'" fill="none" stroke="#c8102e" stroke-width="1.6" stroke-dasharray="2.5 2.5"/>' : '')
       + (showLbl ? '<text x="'+((right? x+11 : x-11)).toFixed(1)+'" y="'+(y+4).toFixed(1)+'" text-anchor="'+(right?'start':'end')+'" style="font-weight:'+(it.o.asserted?'700':'400')+'">'+it.o.name.slice(0,30)+'</text>' : '')
       + '</g>');
   });
@@ -401,26 +404,29 @@ function drawMap(){
       if(sc.capNote) h += '<div style="margin-top:6px;color:#b45309">'+sc.capNote+'.</div>';
       if(sc.conflict) h += '<div style="margin-top:6px;color:#b91c1c">Зафиксирован публичный конфликт (в потенциал не входит, показан для полноты).</div>';
       h += '<div style="margin-top:10px"><button onclick="toMatch(\\''+center.id+'\\', \\''+o.id+'\\')" style="padding:7px 14px;background:var(--red);color:#fff;border:0;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer">Матч-отчёт '+center.name.slice(0,14)+' ↔ '+o.name.slice(0,14)+'</button></div>';
-      var cards = DATA.cards[o.id] || [];
-      if(cards.length){
-        h += '<div style="margin-top:14px;border-top:1px dashed var(--border);padding-top:10px"><b>Что установили наши исследователи</b></div>';
-        cards.forEach(function(c){
-          var AX=[['ideological_compatibility','Идейная'],['practical_compatibility','Практическая'],['mutual_benefit','Полезность'],['confirmed_activity','Активность'],['contact_accessibility','Доступность']];
-          var ax = AX.map(function(x){var v=c.assessments[x[0]];return x[1]+': '+(v===null||v===undefined?'Н/Д':v+'/4');}).join(' · ');
-          var cl={high:'высокая',medium:'средняя',low:'низкая'}[c.confidence]||c.confidence;
-          var pl={high:'высокая',medium:'средняя',low:'низкая'}[c.completeness]||c.completeness;
-          h += '<details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--red)">Карточка · '+esc(c.researcher)+' · '+esc(c.date)+'</summary>'
-            + '<div style="margin-top:6px;font-size:13px;line-height:1.55">'
-            + '<div><b>Оценки исследователя:</b> '+ax+'</div>'
-            + '<div><b>Приоритет:</b> '+(c.priority?('Кат. '+c.priority):'—')+(c.priority_reason?' — '+esc(c.priority_reason):'')+'</div>'
-            + '<div><b>Достоверность:</b> '+cl+' · <b>полнота:</b> '+pl+'</div>'
-            + '<div style="margin-top:4px">'+esc(c.summary)+'</div>'
-            + '</div></details>';
-        });
-      }
+      h += cardsBlock(o.id);
       p.innerHTML = h; p.style.display='block';
     });
   });
+}
+function cardsBlock(orgId){
+  var cards = DATA.cards[orgId] || [];
+  if(!cards.length) return '';
+  var h = '<div style="margin-top:14px;border-top:1px dashed var(--border);padding-top:10px"><b>Что установили наши исследователи</b> <span style="color:var(--muted);font-size:12px">('+cards.length+')</span></div>';
+  cards.forEach(function(c){
+    var AX=[['ideological_compatibility','Идейная'],['practical_compatibility','Практическая'],['mutual_benefit','Полезность'],['confirmed_activity','Активность'],['contact_accessibility','Доступность']];
+    var ax = AX.map(function(x){var v=(c.assessments||{})[x[0]];return x[1]+': '+(v===null||v===undefined?'Н/Д':v+'/4');}).join(' · ');
+    var cl={high:'высокая',medium:'средняя',low:'низкая'}[c.confidence]||c.confidence;
+    var pl={high:'высокая',medium:'средняя',low:'низкая'}[c.completeness]||c.completeness;
+    h += '<details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--red)">Карточка · '+esc(c.researcher)+' · '+esc(c.date)+'</summary>'
+      + '<div style="margin-top:6px;font-size:13px;line-height:1.55">'
+      + '<div><b>Оценки исследователя:</b> '+ax+'</div>'
+      + '<div><b>Приоритет:</b> '+(c.priority?('Кат. '+c.priority):'—')+(c.priority_reason?' — '+esc(c.priority_reason):'')+'</div>'
+      + '<div><b>Достоверность:</b> '+cl+' · <b>полнота:</b> '+pl+'</div>'
+      + '<div style="margin-top:4px">'+esc(c.summary)+'</div>'
+      + '</div></details>';
+  });
+  return h;
 }
 function toMatch(aid, bid){
   document.getElementById('mA').value=aid;
@@ -457,6 +463,7 @@ function render(){
     if(cat && o.category!==cat) return;
     if(sec && o.section!==sec) return;
     if(only==='asserted' && !o.asserted) return;
+    if(only==='cards' && !DATA.cards[o.id]) return;
     n++;
     var d=document.createElement('div'); d.className='card';
     var badge=o.asserted?'<span class="ok">паспорт утверждён</span>':'<span class="draft">черновик — не утверждён организацией</span>';
@@ -465,10 +472,12 @@ function render(){
       +(((o.acts||[]).concat(o.acts_inferred||[]).length)?'<p class="stat"><b>Сферы:</b> '+Object.keys((function(){var m={};(o.acts||[]).concat(o.acts_inferred||[]).forEach(function(x){m[x]=1;});return m;})()).map(function(x){return ACT[x]||x;}).join(', ')+((o.acts_inferred||[]).length && !(o.acts||[]).length?' <span style="color:var(--muted)">(по разделу списка)</span>':'')+'</p>':'')
       +(o.offers.length?'<p class="stat"><b>Предлагает:</b> '+o.offers.map(function(x){return FMT[x[0]]||x[0];}).join(', ')+'</p>':'')
       +(o.seeks.length?'<p class="stat"><b>Ищет:</b> '+o.seeks.map(function(x){return FMT[x[0]]||x[0];}).join(', ')+'</p>':'')
+      + cardsBlock(o.id)
       +(o.site?'<a class="link" href="'+esc(o.site)+'" target="_blank" rel="noopener">Источник →</a>':'');
     g.appendChild(d);
   });
-  document.getElementById('count').textContent='Показано '+n+' из '+DATA.orgs.length+' · подтверждённых связей в базе: '+DATA.connections.length;
+  var nCards = 0; DATA.orgs.forEach(function(o){ if(DATA.cards[o.id]) nCards += DATA.cards[o.id].length; });
+  document.getElementById('count').textContent='Показано '+n+' из '+DATA.orgs.length+' · подтверждённых связей в базе: '+DATA.connections.length+' · карточек исследований: '+nCards;
 }
 render();
 </script>
