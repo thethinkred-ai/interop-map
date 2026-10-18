@@ -319,12 +319,13 @@ function drawMap(){
     var rad = it.o.asserted ? 8 : 6;
     var showLbl = s>0 && labeled<22;
     if(showLbl) labeled++;
+    var right = x >= cx;
     parts.push('<g class="node" data-id="'+it.o.id+'">'
       + '<circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="'+rad+'" fill="'+fill+'" stroke="#fff" stroke-width="1.5" opacity="0.92"><title>'+it.o.name+' — потенциал '+s+'/10</title></circle>'
-      + (showLbl ? '<text x="'+(x+11).toFixed(1)+'" y="'+(y+4).toFixed(1)+'" style="font-weight:'+(it.o.asserted?'700':'400')+'">'+it.o.name.slice(0,30)+'</text>' : '')
+      + (showLbl ? '<text x="'+((right? x+11 : x-11)).toFixed(1)+'" y="'+(y+4).toFixed(1)+'" text-anchor="'+(right?'start':'end')+'" style="font-weight:'+(it.o.asserted?'700':'400')+'">'+it.o.name.slice(0,30)+'</text>' : '')
       + '</g>');
   });
-  parts.push('<g><circle cx="'+cx+'" cy="'+cy+'" r="17" fill="#c8102e"/><circle cx="'+cx+'" cy="'+cy+'" r="17" fill="none" stroke="#fff" stroke-width="2.5"/><text x="'+(cx+24)+'" y="'+(cy+5)+'" style="font-size:14px;font-weight:700;fill:#1a1a2e;paint-order:stroke;stroke:#fff;stroke-width:3px">'+center.name.slice(0,34)+'</text></g>');
+  parts.push('<g><circle cx="'+cx+'" cy="'+cy+'" r="17" fill="#c8102e"/><circle cx="'+cx+'" cy="'+cy+'" r="17" fill="none" stroke="#fff" stroke-width="2.5"/><text x="'+cx+'" y="'+(cy+38)+'" text-anchor="middle" style="font-size:14px;font-weight:700;fill:#1a1a2e;paint-order:stroke;stroke:#fff;stroke-width:3px">'+center.name.slice(0,40)+'</text></g>');
   svg.setAttribute('viewBox', '0 0 1000 780');
   svg.innerHTML = parts.join('');
   Array.prototype.forEach.call(svg.querySelectorAll('.node'), function(g){
