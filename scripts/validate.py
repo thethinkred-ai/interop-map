@@ -62,17 +62,21 @@ def _check(node, schema, path, errors, root):
 
     t = schema.get('type')
     if t:
-        ok = {
-            'object': isinstance(node, dict),
-            'array': isinstance(node, list),
-            'string': isinstance(node, str),
-            'boolean': isinstance(node, bool),
-            'integer': isinstance(node, int) and not isinstance(node, bool),
-            'number': isinstance(node, (int, float)) and not isinstance(node, bool),
-            'null': node is None,
-        }.get(t, True)
-        if not ok:
-            errors.append('%s: ожидался %s, получен %s' % (path, t, type(node).__name__))
+        def _ok(kind):
+            return {
+                'object': isinstance(node, dict),
+                'array': isinstance(node, list),
+                'string': isinstance(node, str),
+                'boolean': isinstance(node, bool),
+                'integer': isinstance(node, int) and not isinstance(node, bool),
+                'number': isinstance(node, (int, float)) and not isinstance(node, bool),
+                'null': node is None,
+            }.get(kind, True)
+
+        kinds = t if isinstance(t, list) else [t]
+        if not any(_ok(k) for k in kinds):
+            errors.append('%s: ожидался %s, получен %s'
+                          % (path, '/'.join(kinds), type(node).__name__))
             return
 
     if 'const' in schema and node != schema['const']:
