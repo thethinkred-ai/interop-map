@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-064",
+ "asserted": false,
+ "identity": {
+  "name": "История оппозиции Казахстана",
+  "status": "Видеохроника и разборы истории казахстанского оппозиционного и рабочего движения (Жанаозен 2011, независимые профсоюзы, независимые кандидаты).",
+  "legal_form": "Историко-просветительский канал"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UCNJgnslpVSGg37EdpoMb6gw"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №64",
+  "notes": "Совпадает по теме или формату: Историко-просветительский канал · СНГ. Проверено: yt-dlp, 72000 подписчиков, 11 октября 2026."
+ }
+}

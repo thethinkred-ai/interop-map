@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-008",
+ "asserted": false,
+ "identity": {
+  "name": "РКРП-КПСС",
+  "status": "Создана в 2001 году объединением РКРП и Российской партии коммунистов; с 2007 года существует в форме общественной организации.",
+  "legal_form": "Несистемная коммунистическая"
+ },
+ "channels": {
+  "site": "https://ru.wikipedia.org/wiki/Российская_коммунистическая_рабочая_партия"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Несистемные коммунистические партии и движения",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №8",
+  "notes": "За структурой — долгая история рабочего актива. Смотрим, что делает сегодня."
+ }
+}

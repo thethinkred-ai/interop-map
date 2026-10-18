@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-151",
+ "asserted": false,
+ "identity": {
+  "name": "МАРКСИЗМ.ОНЛАЙН",
+  "status": "Электронная библиотека марксизма: ПСС Ленина для комфортного чтения онлайн, предметный указатель с поиском.",
+  "legal_form": "платформа-библиотека для чтения и исследований"
+ },
+ "channels": {
+  "site": "https://marxism.online/"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Библиотеки и архивы первоисточников",
+  "page_status": "Изучаем взаимодействие",
+  "page_category": "B",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №151",
+  "notes": "Совпадает по теме или формату: По формату (онлайн-чтение + указатель) наиболее близкий к thinkred проект. Проверено: 200"
+ }
+}

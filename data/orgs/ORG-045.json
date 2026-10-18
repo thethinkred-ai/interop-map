@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-045",
+ "asserted": false,
+ "identity": {
+  "name": "Уголок марксизма",
+  "status": "Публикация и озвучка трудов классиков марксизма-ленинизма (Сталин, Ленин, работы РСДРП(б)), первоисточники без пересказа.",
+  "legal_form": "первоисточники / марксизм-ленинизм"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UCWhuWUnlIYtOWiqhvky74Yw"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Изучаем взаимодействие",
+  "page_category": "B",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №45",
+  "notes": "Совпадает по теме или формату: Идентичная задача: давать первоисточники, а не учебники «по мотивам».. Проверено: GET канала → HTTP 200, &lt;title&gt;«Уголок марксизма - YouTube»&gt;, 64 вхождения «Уголок» в HTML; yt-dlp: подписчиков 23400. Видео: «И.В. Сталин — Апрельская"
+ }
+}

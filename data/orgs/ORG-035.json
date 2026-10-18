@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-035",
+ "asserted": false,
+ "identity": {
+  "name": "Morning Star",
+  "status": "Британская ежедневная левая (коммунистическая) газета, освещает профсоюзы и трудовые конфликты.",
+  "legal_form": "media / газета"
+ },
+ "channels": {
+  "site": "https://www.morningstaronline.co.uk/"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Медиа-проекты и площадки",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №35",
+  "notes": "Совпадает по теме или формату: Профсоюзная и рабочая тематика. Проверено: HTTP 200; title &#x27;Morning Star | The People’s Daily | Morning Star&#x27;"
+ }
+}

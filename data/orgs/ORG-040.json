@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-040",
+ "asserted": false,
+ "identity": {
+  "name": "Left Voice",
+  "status": "Троцкистское онлайн-медиа о рабочем движении, стачках и левом активизме.",
+  "legal_form": "медиа"
+ },
+ "channels": {
+  "site": "https://www.leftvoice.org/"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Медиа-проекты и площадки",
+  "page_status": "Расхождения по методу",
+  "page_category": "C",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №40",
+  "notes": "Совпадает по теме или формату: Рабочее движение, забастовки. По методу расходимся: троцкистская линия — не наша платформа. Проверено: HTTP 200; title &#x27;Left Voice&#x27;"
+ }
+}

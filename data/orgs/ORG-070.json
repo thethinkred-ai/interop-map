@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-070",
+ "asserted": false,
+ "identity": {
+  "name": "KommunistPMR",
+  "status": "Канал приднестровских коммунистов: материалы в поддержку Олега Хоржана, критика местных властей и «Шерифа».",
+  "legal_form": "Группа/канал коммунистов ПМР"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UC9m_uTSo4n9ICS33mjnx93Q"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №70",
+  "notes": "Совпадает по теме или формату: Группа/канал коммунистов ПМР · СНГ. Проверено: yt-dlp, 165 подписчиков, 11 октября 2026."
+ }
+}

@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/thethinkred-ai/interop-map/main/schema/connection.schema.json",
+  "title": "Связь между организациями v1.0",
+  "description": "Только подтверждённые связи. Совместное участие в одном мероприятии или одинаковая идеология — не связь. Конфликты фиксируются наравне с сотрудничеством.",
+  "type": "object",
+  "required": ["schema_version", "participants", "type", "proof"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "participants": {
+      "type": "array",
+      "minItems": 2,
+      "items": { "type": "string", "pattern": "^ORG-[0-9]{3,4}$" }
+    },
+    "type": {
+      "enum": [
+        "joint_project",
+        "coalition",
+        "publication_exchange",
+        "joint_event",
+        "international_network",
+        "split",
+        "public_conflict",
+        "discontinued"
+      ]
+    },
+    "proof": {
+      "type": "object",
+      "required": ["url"],
+      "additionalProperties": false,
+      "properties": {
+        "url": { "type": "string" },
+        "quote": { "type": "string", "maxLength": 600 },
+        "date": { "type": "string", "maxLength": 40 }
+      }
+    },
+    "period": { "type": "string", "maxLength": 80 },
+    "confidence": { "enum": ["high", "medium", "low"] },
+    "note": { "type": "string", "maxLength": 400 }
+  }
+}

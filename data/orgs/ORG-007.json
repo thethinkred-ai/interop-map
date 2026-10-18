@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-007",
+ "asserted": false,
+ "identity": {
+  "name": "ОКП",
+  "status": "Незарегистрированная партия, основана в 2014 году; позиционирует себя как революционную и одну из крупнейших непарламентских компартий страны.",
+  "legal_form": "Несистемная коммунистическая"
+ },
+ "channels": {
+  "site": "https://ru.wikipedia.org/wiki/Объединённая_коммунистическая_партия"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Несистемные коммунистические партии и движения",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №7",
+  "notes": "По теоретической линии ближе к нам, чем парламентские структуры. Изучаем их материалы и практику."
+ }
+}

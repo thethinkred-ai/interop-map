@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-113",
+ "asserted": false,
+ "identity": {
+  "name": "Красный Маяк",
+  "status": "Популяризация марксистской науки, брошюры для коллективного изучения.",
+  "legal_form": "просветительский проект"
+ },
+ "channels": {
+  "site": "https://t.me/Red_Mayak"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Telegram-каналы и блоги",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №113",
+  "notes": "Совпадает по теме или формату: Проверено: https://t.me/Red_Mayak → HTTP 200, публичная страница отдаёт название и описание: 3 088 подписчиков; «брошюра, дающая общее представление о марксистск"
+ }
+}

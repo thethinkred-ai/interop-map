@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-055",
+ "asserted": false,
+ "identity": {
+  "name": "Университет Марксизма",
+  "status": "Лекции «Университета Марксизма»: современная марксистская теория, идеология, неолиберализм, политэкономия Африки и КНР, внепартийный просветительский проект.",
+  "legal_form": "образовательный проект"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UCsTvF8_dyS4hpjRczQKN6kw"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №55",
+  "notes": "Совпадает по теме или формату: Структура лекций и внепартийный просветительский характер совпадают с нашим подходом.. Проверено: GET канала → HTTP 200, &lt;title&gt;«Университет Марксизма - YouTube»&gt;; yt-dlp: подписчиков 5030. Видео: «Развитие и трансформация теории идеологии в маркси"
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-068",
+ "asserted": false,
+ "identity": {
+  "name": "Books for Development",
+  "status": "Общественный фонд «Книги для развития» (Бишкек, Кыргызстан): продвижение левой литературы, в т.ч. материалы о киргизстанском марксизме («Маркс по-кыргызски»).",
+  "legal_form": "Просветительский фонд"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UCLTRU6x1pb2KVMLWRrfBiGg"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №68",
+  "notes": "Совпадает по теме или формату: Просветительский фонд · СНГ. Проверено: yt-dlp, 12 подписчиков, 11 октября 2026."
+ }
+}

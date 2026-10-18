@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-106",
+ "asserted": false,
+ "identity": {
+  "name": "Foreign Languages Press",
+  "status": "Маоистско-ориентированное издательство: переиздания классиков марксизма-ленинизма, маоистских теоретиков, учебные пособия по диалектическому и историческому материализму, обновлённые переводы.",
+  "legal_form": "Издательство марксистской литературы"
+ },
+ "channels": {
+  "site": "https://foreignlanguages.press/"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Зарубежные каналы и медиапроекты",
+  "page_status": "Расхождения по методу",
+  "page_category": "C",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №106",
+  "notes": "Совпадает по теме или формату: Средне-высокая: издательская/учебная функция — совпадает с «библиотечным» направлением thinkred.. По методу расходимся: маоистская линия — не наша платформа. Проверено: GET https://foreignlanguages.press/ → 200; &lt;title&gt;Home - Foreign Languages Press; og:title совпадает."
+ }
+}

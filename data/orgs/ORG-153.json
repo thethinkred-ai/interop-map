@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-153",
+ "asserted": false,
+ "identity": {
+  "name": "ПСС В. И. Ленина (5-е издание)",
+  "status": "55 томов ПСС Ленина (5-е изд., 1967) в вебе, по томам и с постраничной навигацией.",
+  "legal_form": "полное собрание сочинений онлайн (чтение по томам)"
+ },
+ "channels": {
+  "site": "http://leninvi.com/"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Библиотеки и архивы первоисточников",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №153",
+  "notes": "Совпадает по теме или формату: По корпусу; формат «читай онлайн» близок ассистенту thinkred Проверено: 200"
+ }
+}

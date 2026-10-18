@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-087",
+ "asserted": false,
+ "identity": {
+  "name": "Критика критической критики",
+  "status": "Видеоэссе о фашизации, «механике современного рабства», информационной войне.",
+  "legal_form": "Марксистский канал"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UCiuxPEIVPjuPYDxJMEsoeSQ"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №87",
+  "notes": "Совпадает по теме или формату: Марксистский канал · Россия. Проверено: yt-dlp, 27400 подписчиков, 11 октября 2026."
+ }
+}

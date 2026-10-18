@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-199",
+ "asserted": false,
+ "identity": {
+  "name": "«Красная Юрта» — просветительская платформа Организации Трудящихся Казахстана",
+  "status": "Просветительская платформа Организации Трудящихся Казахстана: разъяснение рабочей повестки, трудовых прав, классового анализа; связанные площадки в Telegram/VK/YouTube.",
+  "legal_form": "Просветительская платформа рабочей организации"
+ },
+ "channels": {
+  "site": "https://redyurt.kz/"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Страны СНГ: организации и проекты",
+  "page_status": "Изучаем взаимодействие",
+  "page_category": "B",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №199",
+  "notes": "Совпадает по теме или формату: прямое совпадение по профилю — просвещение рабочего класса и рабочая повестка Проверено: GET https://redyurt.kz/ -&gt; HTTP 200; &lt;title&gt;Красная Юрта&lt;/title&gt;; GET https://t.me/redyurt -&gt; HTTP 200, og:description «Просветите"
+ }
+}

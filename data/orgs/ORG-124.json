@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-124",
+ "asserted": false,
+ "identity": {
+  "name": "Центральноазиатский марксизм",
+  "status": "Первый социалистический канал региона (мультиязычные подписи: каз., кырг., узб., тадж.) — марксистское просвещение по Центральной Азии.",
+  "legal_form": "Марксистский канал (регион)"
+ },
+ "channels": {
+  "site": "https://t.me/centralasianmarxism"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Telegram-каналы и блоги",
+  "page_status": "Изучаем взаимодействие",
+  "page_category": "B",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №124",
+  "notes": "Редкая площадка, соединяющая левых Центральной Азии — ценна для карты взаимодействия."
+ }
+}

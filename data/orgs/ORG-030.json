@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-030",
+ "asserted": false,
+ "identity": {
+  "name": "«Летописи» (@greatstruggle)",
+  "status": "Исследовательский проект (Telegram, Teletype, VK), самоназвание — «группа по исследованию левого болота»: критика левых групп без положительной программы.",
+  "legal_form": "Медиа-проект"
+ },
+ "channels": {
+  "site": "https://teletype.in/@greatstruggle"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Медиа-проекты и площадки",
+  "page_status": "Изучаем взаимодействие",
+  "page_category": "B",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №30",
+  "notes": "Разбор готов 10.10.2026. Взаимодействие возможно по фактам и документам, а не по флагам."
+ }
+}

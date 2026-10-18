@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-108",
+ "asserted": false,
+ "identity": {
+  "name": "In Defence of Marxism (marxist.com)",
+  "status": "Портал Международной марксистской тенденции (IMT, троцкистская): обширная библиотека по теории, истории, политэкономии и антиимпериализму; множество языков, активный обучающий контент.",
+  "legal_form": "Теоретический/аналитический портал"
+ },
+ "channels": {
+  "site": "https://marxist.com/"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Зарубежные каналы и медиапроекты",
+  "page_status": "Расхождения по методу",
+  "page_category": "C",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №108",
+  "notes": "Совпадает по теме или формату: Формально высокая (теория, библиотека, обучающие материалы), но методологически расходится: троцкистская линия против ортодоксального марксизма-ленинизма.. По методу расходимся: троцкистская линия — не наша платформа. Проверено: GET https://marxist.com/ → 200; &lt;title&gt;In Defence of Marxism."
+ }
+}

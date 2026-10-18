@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-200",
+ "asserted": false,
+ "identity": {
+  "name": "Qyzyl Tu",
+  "status": "Казахскоязычный левый канал; девиз «Болмыс сананы билейді / Бытие определяет сознание» — прямая отсылка к материалистическому пониманию истории.",
+  "legal_form": "Марксистский просветительский канал (казахский язык)"
+ },
+ "channels": {
+  "site": "https://t.me/qyzyl_tu"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Страны СНГ: организации и проекты",
+  "page_status": "Изучаем взаимодействие",
+  "page_category": "B",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №200",
+  "notes": "Совпадает по теме или формату: марксистская теоретическая рамка, просвещение на местном языке Проверено: GET https://t.me/qyzyl_tu -&gt; HTTP 200; og:title «Qyzyl Tu», og:description «Болмыс сананы билейді / Бытие определяет сознание» (пр"
+ }
+}

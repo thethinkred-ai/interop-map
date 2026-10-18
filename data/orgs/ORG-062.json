@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-062",
+ "asserted": false,
+ "identity": {
+  "name": "Перспектива KZ",
+  "status": "Казахстанский канал, критикующий существующую экономическую модель и выступающий за социалистическую альтернативу; ведёт «трудовой ликбез» и разборы профсоюзных тем.",
+  "legal_form": "Левый просветительский канал"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UCpUf48WQssiICGlJ61YraZg"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №62",
+  "notes": "Совпадает по теме или формату: Левый просветительский канал · СНГ. Проверено: yt-dlp, 8520 подписчиков, 11 октября 2026."
+ }
+}

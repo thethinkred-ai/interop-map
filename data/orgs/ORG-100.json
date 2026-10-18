@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-100",
+ "asserted": false,
+ "identity": {
+  "name": "Чтение марксистско-ленинской литературы",
+  "status": "Совместное чтение «Науки логики» Гегеля, ПСС Маркса-Энгельса и Ленина.",
+  "legal_form": "Кружок самообразования"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UCw4ooth2ChG0kAQta_m0FrQ"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №100",
+  "notes": "Совпадает по теме или формату: Кружок самообразования · Россия. Проверено: yt-dlp, 213 подписчиков, 11 октября 2026."
+ }
+}

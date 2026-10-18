@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-059",
+ "asserted": false,
+ "identity": {
+  "name": "Рабочая Партия Беларуси",
+  "status": "Канал для информационной поддержки создания рабочей партии в Беларуси; публикует, в частности, записи «Красного Университета» об актуальности изучения марксизма-ленинизма в Беларуси.",
+  "legal_form": "Партийный/образовательный канал"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UCdSCIuDY7L8iSsmynXZYB9A"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №59",
+  "notes": "Совпадает по теме или формату: Партийный/образовательный канал · СНГ. Проверено: yt-dlp, 68 подписчиков, 11 октября 2026."
+ }
+}

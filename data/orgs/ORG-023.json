@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-023",
+ "asserted": false,
+ "identity": {
+  "name": "Португальская коммунистическая партия",
+  "status": "Основана в 1921 году как национальная секция Коминтерна; вела борьбу против диктатуры Салазара, её руководители неоднократно арестовывались.",
+  "legal_form": "Коммунистическая партия"
+ },
+ "channels": {
+  "site": "https://ru.wikipedia.org/wiki/Португальская_коммунистическая_партия"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Международные партии и форматы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №23",
+  "notes": "Классический пример партии, выросшей из подполья в массовую силу. Изучаем опыт."
+ }
+}

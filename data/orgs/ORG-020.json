@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-020",
+ "asserted": false,
+ "identity": {
+  "name": "Коммунистическая партия Китая",
+  "status": "Правящая партия КНР.",
+  "legal_form": "Правящая партия"
+ },
+ "channels": {
+  "site": "https://ru.wikipedia.org/wiki/Коммунистическая_партия_Китая"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Международные партии и форматы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №20",
+  "notes": "Разбираем их опыт в статьях. Формального взаимодействия нет и в обозримом виде не планируется."
+ }
+}

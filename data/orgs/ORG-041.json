@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-041",
+ "asserted": false,
+ "identity": {
+  "name": "/spichka (журнал)",
+  "status": "«Идеи марксизма сегодня»: марксистская теория, есть раздел «Право для марксизма — руководство к применению».",
+  "legal_form": "медиа / журнал"
+ },
+ "channels": {
+  "site": "https://spichka.media/"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Медиа-проекты и площадки",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №41",
+  "notes": "Совпадает по теме или формату: Марксистская теория, право. Проверено: HTTP 200; title &#x27;Журнал /spichka — идеи марксизма сегодня&#x27;"
+ }
+}

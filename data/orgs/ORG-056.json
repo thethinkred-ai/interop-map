@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-056",
+ "asserted": false,
+ "identity": {
+  "name": "Воинствующий Материализм",
+  "status": "Разборы диалектического и исторического материализма: классовая борьба и государство, нация и национализм, смысл жизни для материалиста, критика идеализма.",
+  "legal_form": "философия / диамат"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UCg8ii5WyhlfY-4-4SYoNrFQ"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №56",
+  "notes": "Совпадает по теме или формату: Философское ядро марксизма — то, что мы даём в курсе по гегелю.. Проверено: GET канала → HTTP 200, &lt;title&gt;«Воинствующий Материализм - YouTube»&gt;; yt-dlp: подписчиков 4660. Видео: «Class Struggle and the Significance of the Stat"
+ }
+}

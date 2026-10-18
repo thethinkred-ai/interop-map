@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-005",
+ "asserted": false,
+ "identity": {
+  "name": "ФНПР",
+  "status": "Крупнейшее профобъединение России, объединяет большинство крупных профсоюзов: около 20 млн членов на 2016 год.",
+  "legal_form": "Системный профцентр"
+ },
+ "channels": {
+  "site": "https://ru.wikipedia.org/wiki/Федерация_независимых_профсоюзов_России"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Системные структуры",
+  "page_status": "Расхождения по методу",
+  "page_category": "C",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №5",
+  "notes": "Массовая структура, но её практика — согласование, а не борьба. Возможны только точечные трудовые кампании."
+ }
+}

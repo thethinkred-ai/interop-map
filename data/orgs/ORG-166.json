@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-166",
+ "asserted": false,
+ "identity": {
+  "name": "The People&#x27;s Academy (Progressive International)",
+  "status": "Политико-образовательная программа PI: курс по марксистскому аналитическому методу, видео-лекции, чтения и cadre program для политобразования внутри движений. Ведётся лидерами движений и марксистскими",
+  "legal_form": "Progressive International (международная левая организация)"
+ },
+ "channels": {
+  "site": "https://act.progressive.international/academy/"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Образовательные проекты и школы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №166",
+  "notes": "Совпадает по теме или формату: Структурированная программа политобразования по марксизму. Проверено: HTTP 200; title «The People&#x27;s Academy»; коллекция на progressive.international — 200"
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-152",
+ "asserted": false,
+ "identity": {
+  "name": "Ленин — библиотека leninism.su",
+  "status": "Библиотека по Ленину: ПСС, книги и статьи о Ленине, «Неизвестные документы», учебные пособия («Основы марксизма-ленинизма»).",
+  "legal_form": "тематическая онлайн-библиотека (марксизм-ленинизм)"
+ },
+ "channels": {
+  "site": "https://leninism.su/"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Библиотеки и архивы первоисточников",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №152",
+  "notes": "Совпадает по теме или формату: (язык и корпус), методологически — ортодоксальный м-л. Проверено: 200"
+ }
+}

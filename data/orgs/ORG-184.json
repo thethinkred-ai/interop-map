@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-184",
+ "asserted": false,
+ "identity": {
+  "name": "ОКП Челябинская область",
+  "status": "Публичное сообщество ВКонтакте; текст описания не отдаётся без авторизации.",
+  "legal_form": "Региональное отделение Объединённой коммунистической партии"
+ },
+ "channels": {
+  "site": "https://vk.com/club81217344"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "ВКонтакте: сообщества",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №184",
+  "notes": "Совпадает по теме или формату: партия (регион). Проверено: HTTP 200; &lt;title&gt; = «ОКП Челябинская область | | 2026 | ВКонтакте»"
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-202",
+ "asserted": false,
+ "identity": {
+  "name": "Партия социалистов Республики Молдова (ПСРМ)",
+  "status": "Крупнейшая левая партия Молдовы социалистической ориентации: новости, программные документы, работа фракции.",
+  "legal_form": "Левая социалистическая партия"
+ },
+ "channels": {
+  "site": "https://socialistii.md/ru/"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Страны СНГ: организации и проекты",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №202",
+  "notes": "Совпадает по теме или формату: левая/социалистическая повестка, марксизм не является официальной методологией Проверено: GET https://socialistii.md/ru/ -&gt; HTTP 200 (162038 байт); &lt;title&gt;ПСРМ — Партия Социалистов Республики Молдова&lt;/title&gt; (проверено 2"
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-057",
+ "asserted": false,
+ "identity": {
+  "name": "Диктатура пролетариата",
+  "status": "Видео о положении трудящихся и классовой политике: реформа рабочего времени, критика партий и олигархии, агитация за интересы пролетариата.",
+  "legal_form": "классовая политика / рабочая повестка"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UC-7fV49wji0vpOmVQ3V5ACw"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №57",
+  "notes": "Совпадает по теме или формату: Классовый разбор текущей политики — совпадает с нашим разделом разбора классовой борьбы.. Проверено: GET канала → HTTP 200, &lt;title&gt;«Диктатура пролетариата - YouTube»&gt;; yt-dlp: подписчиков 3050, девиз «Либо диктатура пролетариата, либо буржуазии». Виде"
+ }
+}

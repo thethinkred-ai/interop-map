@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-142",
+ "asserted": false,
+ "identity": {
+  "name": "Держать Курс",
+  "status": "Просветительский проект (публикации в Boosty), историческая и общественно-политическая повестка левого спектра.",
+  "legal_form": "Просветительский проект"
+ },
+ "channels": {
+  "site": "https://t.me/keepkurs1"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Telegram-каналы и блоги",
+  "page_status": "Контакт не установлен",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №142",
+  "notes": "Просветительский формат; линию пока оцениваем по материалам."
+ }
+}

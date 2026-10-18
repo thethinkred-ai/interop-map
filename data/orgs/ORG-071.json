@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-071",
+ "asserted": false,
+ "identity": {
+  "name": "КомБаза",
+  "status": "По описанию авторов — политический канал, который анализирует общественные вопросы и даёт ориентиры; публикует, в частности, «Основы марксизма-ленинизма».",
+  "legal_form": "Марксистский политический канал"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UCCc6AVTkMVlbeG7-SWaB33A"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №71",
+  "notes": "Совпадает по теме или формату: Марксистский политический канал · Россия. Проверено: yt-dlp, 6770 подписчиков, 11 октября 2026."
+ }
+}

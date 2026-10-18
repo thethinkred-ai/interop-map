@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-025",
+ "asserted": false,
+ "identity": {
+  "name": "Южно-Африканская коммунистическая партия",
+  "status": "Основана в 1921 году; входит в альянс с Африканским национальным конгрессом и Конгрессом южноафриканских профсоюзов.",
+  "legal_form": "Коммунистическая партия"
+ },
+ "channels": {
+  "site": "https://ru.wikipedia.org/wiki/Южно-Африканская_коммунистическая_партия"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Международные партии и форматы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №25",
+  "notes": "Разбирали стратегию АНК и место партии в альянсе. Наблюдаем."
+ }
+}

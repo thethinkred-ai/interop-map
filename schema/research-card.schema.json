@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/thethinkred-ai/interop-map/main/schema/research-card.schema.json",
+  "title": "Карточка исследования v1.0",
+  "description": "Голос исследователя (организации-участницы или независимого). Всегда атрибутирована. Это оценка автора, а не системы и не «официальная оценка» исследуемой организации.",
+  "type": "object",
+  "required": ["schema_version", "org_id", "researcher", "date", "facts", "summary"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "org_id": { "type": "string", "pattern": "^ORG-[0-9]{3,4}$" },
+    "researcher": {
+      "type": "object",
+      "required": ["name"],
+      "additionalProperties": false,
+      "properties": {
+        "org_id": { "type": "string", "pattern": "^ORG-[0-9]{3,4}$" },
+        "name": { "type": "string", "maxLength": 160 }
+      }
+    },
+    "date": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+    "review_after": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+    "facts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["claim", "status"],
+        "additionalProperties": false,
+        "properties": {
+          "claim": { "type": "string", "maxLength": 600 },
+          "status": { "enum": ["confirmed", "refuted", "not_established", "not_applicable"] },
+          "sources": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "assessments": {
+      "type": "object",
+      "description": "Оценки исследователя (0–4 или null=Н/Д). Не сводятся системой в общий балл организации.",
+      "additionalProperties": false,
+      "properties": {
+        "ideological_compatibility": { "type": ["integer", "null"], "minimum": 0, "maximum": 4 },
+        "practical_compatibility": { "type": ["integer", "null"], "minimum": 0, "maximum": 4 },
+        "mutual_benefit": { "type": ["integer", "null"], "minimum": 0, "maximum": 4 },
+        "confirmed_activity": { "type": ["integer", "null"], "minimum": 0, "maximum": 4 },
+        "contact_accessibility": { "type": ["integer", "null"], "minimum": 0, "maximum": 4 }
+      }
+    },
+    "priority": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "category": { "enum": ["A", "B", "C", "D", "E"] },
+        "reason": { "type": "string", "maxLength": 600 }
+      }
+    },
+    "contact_plan": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "topic": { "type": "string", "maxLength": 400 },
+        "format": { "type": "string", "maxLength": 200 },
+        "addressee": { "type": "string", "maxLength": 200 },
+        "first_project": { "type": "string", "maxLength": 600 }
+      }
+    },
+    "completeness": { "enum": ["high", "medium", "low"] },
+    "confidence": { "enum": ["high", "medium", "low"] },
+    "summary": { "type": "string", "maxLength": 1500 }
+  }
+}

@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-120",
+ "asserted": false,
+ "identity": {
+  "name": "Рабочий Анализ",
+  "status": "Марксистский анализ (иконка ☭); тематика — рабочий класс и классовый анализ.",
+  "legal_form": "аналитический канал"
+ },
+ "channels": {
+  "site": "https://t.me/workingcl"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Telegram-каналы и блоги",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №120",
+  "notes": "Совпадает по теме или формату: Проверено: https://t.me/workingcl → HTTP 200, публичная страница отдаёт название и описание: 739 подписчиков; «название «Рабочий Анализ ☭», отдельного текстового"
+ }
+}

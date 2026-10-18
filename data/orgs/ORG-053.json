@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-053",
+ "asserted": false,
+ "identity": {
+  "name": "Маркс был прав",
+  "status": "«Обзор красных новостей» левого взгляда, видео с митингов и протестов, лекции, а также озвучка советских диафильмов и документальных материалов о достижениях СССР.",
+  "legal_form": "красные новости / архивы СССР"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UCrl7b_3tvkDuSRruyCtX17g"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №53",
+  "notes": "Совпадает по теме или формату: Популяризация истории ссср и классовой борьбы — совпадает с разделом истории рабочего движения.. Проверено: GET канала → HTTP 200, &lt;title&gt;«Маркс был прав - YouTube»&gt;; yt-dlp: подписчиков 9000. Видео: «Lecture Podcast: The Anatomy of Fascism…», диафильмы «Дос"
+ }
+}

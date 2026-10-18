@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-012",
+ "asserted": false,
+ "identity": {
+  "name": "«Суть времени»",
+  "status": "Российское общественное движение, основатель и лидер — Сергей Кургинян; позиционирует себя как лево-патриотическое.",
+  "legal_form": "Движение лево-патриотического толка"
+ },
+ "channels": {
+  "site": "https://ru.wikipedia.org/wiki/Суть_времени"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Несистемные коммунистические партии и движения",
+  "page_status": "Расхождения по методу",
+  "page_category": "C",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №12",
+  "notes": "Расходимся по методу: у нас классовый анализ, у них цивилизационная рамка и теория заговора вместо отношений собственности."
+ }
+}

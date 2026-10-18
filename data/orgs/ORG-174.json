@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-174",
+ "asserted": false,
+ "identity": {
+  "name": "Архив–журнал «Коммунизм рабочих советов»",
+  "status": "Это группа создана как рэтекоммунистический архив-журнал, где публикуются статьи и переводы теоретиков коммунизма рабочих советов.",
+  "legal_form": "Архив-журнал теоретиков коммунизма рабочих советов"
+ },
+ "channels": {
+  "site": "https://vk.com/archive_journal_retecommunism"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "ВКонтакте: сообщества",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №174",
+  "notes": "Совпадает по теме или формату: теория / архив. Проверено: HTTP 200; &lt;title&gt; = «Архив–журнал | Коммунизм рабочих советов | Это группа создана как рэтекоммунистический ар"
+ }
+}

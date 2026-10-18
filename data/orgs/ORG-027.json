@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-027",
+ "asserted": false,
+ "identity": {
+  "name": "Коммунистическая партия Вьетнама",
+  "status": "Правящая партия Вьетнама, ведущая происхождение от созданной в 1930 году Компартии Индокитая.",
+  "legal_form": "Правящая партия"
+ },
+ "channels": {
+  "site": "https://ru.wikipedia.org/wiki/Коммунистическая_партия_Вьетнама"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Международные партии и форматы",
+  "page_status": "Контакт не установлен",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №27",
+  "notes": "Опыт партии, которая прошла войну и построение с нуля. Изучаем материалы, контакта нет."
+ }
+}

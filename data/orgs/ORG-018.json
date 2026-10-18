@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-018",
+ "asserted": false,
+ "identity": {
+  "name": "Сибирская конфедерация труда",
+  "status": "Межрегиональное объединение профсоюзов синдикалистского толка.",
+  "legal_form": "Профобъединение синдикалистского толка"
+ },
+ "channels": {
+  "site": "https://ru.wikipedia.org/wiki/Сибирская_конфедерация_труда"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Профсоюзы и рабочие объединения",
+  "page_status": "Контакт не установлен",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №18",
+  "notes": "Редкий для России пример синдикалистской практики. Контакта нет."
+ }
+}

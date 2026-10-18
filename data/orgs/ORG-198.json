@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-198",
+ "asserted": false,
+ "identity": {
+  "name": "Социалистическое движение Казахстана (СДК/SDK)",
+  "status": "Левое движение, публикующее материалы по рабочему движению, протестам и политэкономии Казахстана.",
+  "legal_form": "Незарегистрированное левое движение"
+ },
+ "channels": {
+  "site": "https://socialismkz.info/"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Страны СНГ: организации и проекты",
+  "page_status": "Изучаем взаимодействие",
+  "page_category": "B",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №198",
+  "notes": "Совпадает по теме или формату: выше средней: интерес к рабочему движению и классовой аналитике Проверено: GET https://socialismkz.info/ -&gt; HTTP 200 (92932 байта) (проверено 2026-10-11)"
+ }
+}

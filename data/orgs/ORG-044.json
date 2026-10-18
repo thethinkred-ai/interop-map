@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-044",
+ "asserted": false,
+ "identity": {
+  "name": "КрасноBY",
+  "status": "Марксистский коллектив энтузиастов (Беларусь): политэкономия, философия, история, регулярные онлайн-занятия и кружки по классикам.",
+  "legal_form": "марксистский коллектив / кружки"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UCdJbNTYaUoDkJ8UnuqqWY1w"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Изучаем взаимодействие",
+  "page_category": "B",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №44",
+  "notes": "Совпадает по теме или формату: Почти копия нашей модели: кружки по первоисточникам + разбор домашних заданий.. Проверено: GET канала → HTTP 200, &lt;title&gt;«КрасноBY - YouTube»&gt;; yt-dlp: подписчиков 49200, описание «марксистский коллектив… занятия с разбором домашних заданий»"
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-049",
+ "asserted": false,
+ "identity": {
+  "name": "STATION MARX",
+  "status": "Один из самых известных русскоязычных левых каналов: дебаты марксистов, интервью, разборы классовой борьбы, событий и фильмов (в т.ч. полемика с троцкистами и маоистами).",
+  "legal_form": "марксистский видеожурнал"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UC0eLHZT61PUZT5rFQhRpPeA"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №49",
+  "notes": "Совпадает по теме или формату: Формат публичных дискуссий о марксизме — то, что мы делаем в разборах первоисточников.. Проверено: GET канала → HTTP 200, &lt;title&gt;«STATION MARX - YouTube»&gt;; yt-dlp: подписчиков 51500. Видео: «Do Marxists Need Elections? Debate…», «Why are taxi driver Линия канала нам не ясна: это площадка дебатов разных течений, метод не отождествляем."
+ }
+}

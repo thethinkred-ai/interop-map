@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-117",
+ "asserted": false,
+ "identity": {
+  "name": "Мыслящий пролетариат",
+  "status": "Цитаты и разборы классиков (Маркс, Ленин), марксистская философия и публицистика.",
+  "legal_form": "теоретический/публицистический канал"
+ },
+ "channels": {
+  "site": "https://t.me/nechaevism"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Telegram-каналы и блоги",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №117",
+  "notes": "Совпадает по теме или формату: Проверено: https://t.me/nechaevism → HTTP 200, публичная страница отдаёт название и описание: 1 060 подписчиков; «эпиграф из Маяковского, разборы марксистской те"
+ }
+}

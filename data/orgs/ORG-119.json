@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-119",
+ "asserted": false,
+ "identity": {
+  "name": "Летописи Великой Борьбы",
+  "status": "«Группа по исследованию левого болота» — разбор левого движения, полемика, мета-аналитика.",
+  "legal_form": "исследовательская группа левой среды"
+ },
+ "channels": {
+  "site": "https://t.me/greatsruggle"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Telegram-каналы и блоги",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №119",
+  "notes": "Совпадает по теме или формату: Проверено: https://t.me/greatsruggle → HTTP 200, публичная страница отдаёт название и описание: 930 подписчиков; «Группа по исследованию левого болота» (проверен"
+ }
+}

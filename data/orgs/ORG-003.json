@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-003",
+ "asserted": false,
+ "identity": {
+  "name": "«Справедливая Россия — За правду»",
+  "status": "Зарегистрированная партия; декларировала социал-демократию, но, по оценкам СМИ и политологов, социал-демократической не является.",
+  "legal_form": "Системная левоконсервативная"
+ },
+ "channels": {
+  "site": "https://ru.wikipedia.org/wiki/Справедливая_Россия"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Системные структуры",
+  "page_status": "Не взаимодействуем",
+  "page_category": "E",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №3",
+  "notes": "Считаем её встроенной в правительственную линию: по нашей политике взаимодействия здесь нет."
+ }
+}

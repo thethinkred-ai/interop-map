@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-017",
+ "asserted": false,
+ "identity": {
+  "name": "СОЦПРОФ",
+  "status": "Объединение профсоюзов России; с 2008–2009 годов полностью поддерживает «Единую Россию» и выступает против массовых протестных мероприятий.",
+  "legal_form": "Профобъединение"
+ },
+ "channels": {
+  "site": "https://ru.wikipedia.org/wiki/Соцпроф"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Профсоюзы и рабочие объединения",
+  "page_status": "Не взаимодействуем",
+  "page_category": "E",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №17",
+  "notes": "Структура, принципиально выступающая против протестных действий рабочих, для нас не партнёр."
+ }
+}

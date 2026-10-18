@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-076",
+ "asserted": false,
+ "identity": {
+  "name": "Новые Красные",
+  "status": "Российский левый медиаканал: кампании солидарности с преследуемыми активистами, экологические и социальные конфликты (Красноярск, Петербург).",
+  "legal_form": "Левый медиаканал"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UCvV_Jz7wydN6aHPM4QYe5QA"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №76",
+  "notes": "Совпадает по теме или формату: Левый медиаканал · Россия. Проверено: yt-dlp, 7590 подписчиков, 11 октября 2026."
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-125",
+ "asserted": false,
+ "identity": {
+  "name": "КЫРГСОЦ",
+  "status": "Телеграм-канал проекта КЫРГСОЦ — левого издания, создаваемого коллективом единомышленников-марксистов в Бишкеке.",
+  "legal_form": "Левое издание / марксистский коллектив"
+ },
+ "channels": {
+  "site": "https://t.me/kyrgsoc"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Telegram-каналы и блоги",
+  "page_status": "Изучаем взаимодействие",
+  "page_category": "B",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №125",
+  "notes": "Единственный найденный действующий марксистский проект Кыргызстана."
+ }
+}

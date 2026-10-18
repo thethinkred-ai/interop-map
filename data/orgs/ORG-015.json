@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-015",
+ "asserted": false,
+ "identity": {
+  "name": "РКСМ(б)",
+  "status": "Российская молодёжная коммунистическая организация (большевиков).",
+  "legal_form": "Молодёжная коммунистическая"
+ },
+ "channels": {
+  "site": "https://ru.wikipedia.org/wiki/Революционный_коммунистический_союз_молодёжи_(большевиков)"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Молодёжные организации",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №15",
+  "notes": "Строгая коммунистическая ориентация без парламентской интеграции. Полезно знать, чем живут."
+ }
+}

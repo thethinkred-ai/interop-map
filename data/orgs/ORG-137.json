@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-137",
+ "asserted": false,
+ "identity": {
+  "name": "РКП(б) — Российская Коммунистическая партия (большевиков)",
+  "status": "Канал РКП(б): программа, устав, приём и связь с администрацией.",
+  "legal_form": "Коммунистическая организация"
+ },
+ "channels": {
+  "site": "https://t.me/rkp_b"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Telegram-каналы и блоги",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №137",
+  "notes": "Организованная коммунистическая структура с уставной работой."
+ }
+}

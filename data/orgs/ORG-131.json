@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-131",
+ "asserted": false,
+ "identity": {
+  "name": "Наука марксизм",
+  "status": "Печатный орган коммунистической организации «Рабочая парадигма»: пропаганда марксизма-ленинизма; есть YouTube и Boosty.",
+  "legal_form": "Печатный орган организации"
+ },
+ "channels": {
+  "site": "https://t.me/marxist_science"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Telegram-каналы и блоги",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №131",
+  "notes": "Организованный м-л орган с кроссплатформенной работой."
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-032",
+ "asserted": false,
+ "identity": {
+  "name": "WSWS (World Socialist Web Site)",
+  "status": "Марксистский анализ, международная борьба рабочего класса; постоянные материалы о стачках и профсоюзах.",
+  "legal_form": "медиа / аналитика"
+ },
+ "channels": {
+  "site": "https://www.wsws.org/"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Медиа-проекты и площадки",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №32",
+  "notes": "Совпадает по теме или формату: Лента трудовых/рабочих конфликтов. Проверено: HTTP 200 (redirect /en?redirect=true); title &#x27;World Socialist Web Site - Marxist analysis, international working class struggles &amp; the fight for socia"
+ }
+}

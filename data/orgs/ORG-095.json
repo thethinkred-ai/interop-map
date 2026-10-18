@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-095",
+ "asserted": false,
+ "identity": {
+  "name": "Марксистские семинары в МГУ",
+  "status": "Записи марксистских семинаров («Логика “Капитала” К. Маркса» и др.).",
+  "legal_form": "Семинары"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UCOStOODpqiURGQLndA0liEw"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №95",
+  "notes": "Совпадает по теме или формату: Семинары · Россия. Проверено: yt-dlp, 515 подписчиков, 11 октября 2026."
+ }
+}

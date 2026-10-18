@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-001",
+ "asserted": false,
+ "identity": {
+  "name": "КПРФ",
+  "status": "Зарегистрированная партия, крупнейшая парламентская фракция левого спектра; ведёт происхождение от КП РСФСР 1990 года.",
+  "legal_form": "Системная парламентская"
+ },
+ "channels": {
+  "site": "https://ru.wikipedia.org/wiki/Коммунистическая_партия_Российской_Федерации"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Системные структуры",
+  "page_status": "Расхождения по методу",
+  "page_category": "C",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №1",
+  "notes": "Программно работает внутри парламентской системы. Для нас это другой метод, а не другой оттенок того же."
+ }
+}

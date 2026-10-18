@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-205",
+ "asserted": false,
+ "identity": {
+  "name": "Massis Weekly — орган Социал-демократической партии Гнчакян (SDHP)",
+  "status": "Официальное издание Социал-демократической партии Гнчакян — одной из старейших армянских партий (осн. 1887), возникшей на марксистской платформе. Регулярно обновляется.",
+  "legal_form": "Партийное издание (социал-демократическое, исторически марксистское)"
+ },
+ "channels": {
+  "site": "https://massisweekly.com/"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Страны СНГ: организации и проекты",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №205",
+  "notes": "Совпадает по теме или формату: живая историческая социал-демократическая традиция, но современный профиль — партийная публицистика Проверено: GET https://massisweekly.com/ -&gt; HTTP 200; &lt;title&gt;Massis Weekly - Organ of the Social Democrat Hunchakian Party&lt;/title&gt;; свежий вы"
+ }
+}

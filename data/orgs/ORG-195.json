@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-195",
+ "asserted": false,
+ "identity": {
+  "name": "Left.BY",
+  "status": "Телеграм-канал белорусских левых: новости левого и рабочего движения Беларуси.",
+  "legal_form": "Медиа-проект левого движения"
+ },
+ "channels": {
+  "site": "https://t.me/left_by"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Страны СНГ: организации и проекты",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №195",
+  "notes": "Совпадает по теме или формату: актуальная лента левой повестки, формат новостного канала, а не теоретической работы Проверено: GET https://t.me/left_by -&gt; HTTP 200; og:title «Left.BY», og:description «Телеграм-канал белорусских левых» (проверено 2026-10-11)"
+ }
+}

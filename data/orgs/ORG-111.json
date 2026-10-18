@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-111",
+ "asserted": false,
+ "identity": {
+  "name": "Struggle-La Lucha",
+  "status": "Газета Партии коммунистов США (Party of Communists USA): марксистско-ленинский анализ классовой борьбы, расизма, империализма, профсоюзной борьбы; новости рабочего движения.",
+  "legal_form": "Партийное медиа / газета"
+ },
+ "channels": {
+  "site": "https://www.struggle-la-lucha.org/"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Зарубежные каналы и медиапроекты",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №111",
+  "notes": "Совпадает по теме или формату: Средняя: медийно-новостной формат с ml-методологией; пересекается с лентой трудовых конфликтов thinkred.. Проверено: GET https://www.struggle-la-lucha.org/ → 200 (страница на WordPress+autoptimize, тег &lt;title&gt; пустой); название подтверждено независимым fetch (web_ext"
+ }
+}

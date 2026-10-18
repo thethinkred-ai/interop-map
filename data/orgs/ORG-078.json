@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-078",
+ "asserted": false,
+ "identity": {
+  "name": "Кружки и конференции РРП",
+  "status": "Записи марксистских кружков Революционной рабочей партии (Москва): диалектика абстрактного и конкретного, деколонизация Африки, внутрипартийная борьба в ВКП(б).",
+  "legal_form": "Партийные кружки"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UC8M5afnjhJObvfSPNMupFJg"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №78",
+  "notes": "Совпадает по теме или формату: Партийные кружки · Россия. Проверено: yt-dlp, 301 подписчиков, 11 октября 2026."
+ }
+}

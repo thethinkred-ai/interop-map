@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-039",
+ "asserted": false,
+ "identity": {
+  "name": "World Anti-Imperialist Platform",
+  "status": "Международная антиимпериалистическая платформа — объединение левых, коммунистических и антиимпериалистических партий.",
+  "legal_form": "сеть / аналитика"
+ },
+ "channels": {
+  "site": "https://wap21.org/"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Медиа-проекты и площадки",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №39",
+  "notes": "Совпадает по теме или формату: Координация левых сил. Проверено: HTTP 200; title &#x27;Platform&#x27;; разделы &#x27;Program of Platform&#x27;, &#x27;Action&#x27;"
+ }
+}

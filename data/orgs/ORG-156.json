@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-156",
+ "asserted": false,
+ "identity": {
+  "name": "Библиотека ФРА",
+  "status": "Гегель (сочинения в 14 т.), Плеханов (24-томник, избранные философские произведения), марксистская философия и политэкономия.",
+  "legal_form": "тематическая онлайн-библиотека"
+ },
+ "channels": {
+  "site": "https://bibl.fra-mos.ru/"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Библиотеки и архивы первоисточников",
+  "page_status": "Расхождения по методу",
+  "page_category": "C",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №156",
+  "notes": "Совпадает по теме или формату: Первоисточники гегеля и плеханова, близкий набор. Проверено: 200"
+ }
+}

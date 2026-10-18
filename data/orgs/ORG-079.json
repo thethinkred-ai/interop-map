@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-079",
+ "asserted": false,
+ "identity": {
+  "name": "Марксистский кружок Брянской области",
+  "status": "Лекции и материалы очных и онлайн-кружков по изучению марксизма; набор участников через ВК.",
+  "legal_form": "Марксистский кружок"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UCBs67umB_ynShaMNiyXItSw"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №79",
+  "notes": "Совпадает по теме или формату: Марксистский кружок · Россия. Проверено: yt-dlp, 802 подписчиков, 11 октября 2026."
+ }
+}

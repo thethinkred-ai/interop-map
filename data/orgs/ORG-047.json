@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-047",
+ "asserted": false,
+ "identity": {
+  "name": "Клим Жуков",
+  "status": "История, философия и культура с позиций диалектического материализма: средневековье, история СССР, разборы кино и литературы как продуктов общественного бытия.",
+  "legal_form": "история / философия (диамат)"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UCIyLQ6cL0eWj1jT6oyy148w"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №47",
+  "notes": "Совпадает по теме или формату: Метод — тот же диамат, что и в наших курсах по гегелю и «капиталу», только на историческом материале.. Проверено: GET канала → HTTP 200, &lt;title&gt;«Клим Жуков - YouTube»&gt;; yt-dlp: подписчиков 972000, в описании прямо заявлены «позиции диалектического материализма… де"
+ }
+}

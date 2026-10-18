@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-090",
+ "asserted": false,
+ "identity": {
+  "name": "Красное радио ФРА",
+  "status": "Интернет-радио Фонда Рабочей Академии: новости рабочего и забастовочного движения.",
+  "legal_form": "Медиа (радио)"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UC3-_-08ej4Vqtm5gc_LSkIQ"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №90",
+  "notes": "Совпадает по теме или формату: Медиа (радио) · Россия. Проверено: yt-dlp, 5160 подписчиков, 11 октября 2026."
+ }
+}

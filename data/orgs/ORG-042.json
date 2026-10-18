@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-042",
+ "asserted": false,
+ "identity": {
+  "name": "Granma (English)",
+  "status": "Официальный печатный орган Компартии Кубы (англ. версия).",
+  "legal_form": "media / официальный орган КП Кубы"
+ },
+ "channels": {
+  "site": "https://en.granma.cu/"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Медиа-проекты и площадки",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №42",
+  "notes": "Совпадает по теме или формату: Партийное медиа, антиимпериализм. Проверено: HTTP 200; title &#x27;Granma - Official voice of the PCC&#x27;"
+ }
+}

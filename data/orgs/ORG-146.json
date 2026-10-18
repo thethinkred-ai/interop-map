@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-146",
+ "asserted": false,
+ "identity": {
+  "name": "Чемоданчик Пруфов",
+  "status": "Пруфы по советской (и не только) истории для аргументации и дискуссии; разбор антисоветских мифов с источниками.",
+  "legal_form": "Историко-просветительский канал"
+ },
+ "channels": {
+  "site": "https://t.me/ochen_mnogo_prufov"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Telegram-каналы и блоги",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №146",
+  "notes": "Работа с фактами и первоисточниками против антисоветских мифов — близко нам."
+ }
+}

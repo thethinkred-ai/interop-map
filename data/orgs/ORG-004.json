@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-004",
+ "asserted": false,
+ "identity": {
+  "name": "ЛКСМ РФ",
+  "status": "Молодёжная коммунистическая организация, позиционирует себя наследником ВЛКСМ; до 2011 года называлась СКМ РФ.",
+  "legal_form": "Молодёжная при КПРФ"
+ },
+ "channels": {
+  "site": "https://ru.wikipedia.org/wiki/Ленинский_коммунистический_союз_молодёжи_Российской_Федерации"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Системные структуры",
+  "page_status": "Расхождения по методу",
+  "page_category": "C",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №4",
+  "notes": "Работает в связке с КПРФ, то есть полностью разделяет её метод."
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-077",
+ "asserted": false,
+ "identity": {
+  "name": "Комиссар Лис",
+  "status": "Канал с чтением и разбором ленинских текстов: собрание сочинений, документы ЦК РСДРП(б), декреты СНК.",
+  "legal_form": "Чтение первоисточников"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UCL-QLmjJ3k64rf72ROOwrrQ"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №77",
+  "notes": "Совпадает по теме или формату: Чтение первоисточников · Россия. Проверено: yt-dlp, 747 подписчиков, 11 октября 2026."
+ }
+}

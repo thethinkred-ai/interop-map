@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-132",
+ "asserted": false,
+ "identity": {
+  "name": "Б.О.М (Базовые основы марксизма)",
+  "status": "Канал «Базовые основы марксизма»: актуальный марксизм, объяснение основ.",
+  "legal_form": "Теоретический канал"
+ },
+ "channels": {
+  "site": "https://t.me/spartakus202"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Telegram-каналы и блоги",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №132",
+  "notes": "Учебно-просветительский формат по основам марксизма."
+ }
+}

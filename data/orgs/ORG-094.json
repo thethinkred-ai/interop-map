@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-094",
+ "asserted": false,
+ "identity": {
+  "name": "РАБОЧАЯ ДЕМОКРАТИЯ",
+  "status": "Новости рабочего, профсоюзного и коммунистического движения (канал РРП).",
+  "legal_form": "Партийный медиаканал"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UCJFzyyReW_CFzpwxMsGcpNw"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №94",
+  "notes": "Совпадает по теме или формату: Партийный медиаканал · Россия. Проверено: yt-dlp, 5050 подписчиков, 11 октября 2026."
+ }
+}

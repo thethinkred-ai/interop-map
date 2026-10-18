@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-144",
+ "asserted": false,
+ "identity": {
+  "name": "Профсоюз работников IT",
+  "status": "Профсоюз работников сферы информационных технологий; сайт ruitunion.org, заявка на участие.",
+  "legal_form": "Независимый профсоюз"
+ },
+ "channels": {
+  "site": "https://t.me/ruitunion"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Telegram-каналы и блоги",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №144",
+  "notes": "Крупный независимый отраслевой профсоюз — ценная профсоюзная практика."
+ }
+}

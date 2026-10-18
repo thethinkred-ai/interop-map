@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-089",
+ "asserted": false,
+ "identity": {
+  "name": "Engels",
+  "status": "Цикл «Марксизм после Маркса», лекции по теории.",
+  "legal_form": "Образовательный проект"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UCl8tzWaoHfQd-nTTzFq1nSg"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №89",
+  "notes": "Совпадает по теме или формату: Образовательный проект · Россия. Проверено: yt-dlp, 4670 подписчиков, 11 октября 2026."
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-143",
+ "asserted": false,
+ "identity": {
+  "name": "Профсоюз Курьер",
+  "status": "Независимый профсоюз курьеров: защита интересов, приём обращений о проблемах на работе.",
+  "legal_form": "Независимый профсоюз"
+ },
+ "channels": {
+  "site": "https://t.me/courier_fight"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Telegram-каналы и блоги",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №143",
+  "notes": "Прямое совпадение: реальный отраслевой профсоюз с борьбой за права работников."
+ }
+}

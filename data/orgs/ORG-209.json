@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-209",
+ "asserted": false,
+ "identity": {
+  "name": "Коммунистическая партия Республики Южная Осетия (КП РЮО)",
+  "status": "Коммунистическая партия РЮО: партийный сайт на конструкторе Craftum; материалы партии.",
+  "legal_form": "Коммунистическая партия"
+ },
+ "channels": {
+  "site": "https://hi2695.craftum.io/"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Страны СНГ: организации и проекты",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №209",
+  "notes": "Совпадает по теме или формату: реальная компартия региона, но ресурс на бесплатной платформе Проверено: GET https://hi2695.craftum.io/ -&gt; HTTP 200; &lt;title&gt;Коммунистическая партия РЮО&lt;/title&gt; (проверено 2026-10-11)"
+ }
+}

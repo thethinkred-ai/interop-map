@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-154",
+ "asserted": false,
+ "identity": {
+  "name": "Библиотека коммунизма",
+  "status": "Собрания сочинений Маркса/Энгельса, Ленина (4-е изд.), Сталина и др. в одном разделе «Все собрания сочинений».",
+  "legal_form": "онлайн-библиотека собраний сочинений"
+ },
+ "channels": {
+  "site": "https://marxism-leninism.info/"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Библиотеки и архивы первоисточников",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №154",
+  "notes": "Совпадает по теме или формату: По корпусу первоисточников. Проверено: 200"
+ }
+}

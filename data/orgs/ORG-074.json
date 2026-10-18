@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-074",
+ "asserted": false,
+ "identity": {
+  "name": "Приморские Марксисты",
+  "status": "Дальневосточный марксистский кружок: разбор «Капитала», чтение и объяснение ленинских работ («Детская болезнь “левизны” в коммунизме» и др.).",
+  "legal_form": "Марксистский кружок"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UC2s6qrky4vWSoL7iR5gwMfw"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №74",
+  "notes": "Совпадает по теме или формату: Марксистский кружок · Россия. Проверено: yt-dlp, 2000 подписчиков, 11 октября 2026."
+ }
+}

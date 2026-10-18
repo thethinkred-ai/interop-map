@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-103",
+ "asserted": false,
+ "identity": {
+  "name": "TheFinnishBolshevik",
+  "status": "Канал финского марксиста-ленинца: лекции о Ленине и Сталине, разборы истории СССР, философии, экономики и капитализма; книжные обзоры (например, по историку Э. Х. Карру). Академичный, спокойный формат",
+  "legal_form": "Образовательный канал (марксизм-ленинизм)"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/@thefinnishbolshevik2404"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Зарубежные каналы и медиапроекты",
+  "page_status": "Изучаем взаимодействие",
+  "page_category": "B",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №103",
+  "notes": "Совпадает по теме или формату: Высокая: образовательный формат (разборы, лекции, книжные обзоры) без новостной повестки — прямая аналогия с просветительским блоком thinkred.. Проверено: GET https://www.youtube.com/@thefinnishbolshevik2404 → 200; channelMetadataRenderer.title=«TheFinnishBolshevik»; подтверждено через страницу видео htt"
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-158",
+ "asserted": false,
+ "identity": {
+  "name": "Midwestern Marx Institute / Marxism School",
+  "status": "Коллектив марксистских преподавателей (Carlos L. Garrido, Noah Khrachvik и др.): видеокурсы по первоисточникам (Маркс, Ленин, Маркузе), разборы диалектики, критика политэкономии и антикоммунизма. Форм",
+  "legal_form": "Midwestern Marx Institute (марксистско-ленинский think tank, осн. 2020)"
+ },
+ "channels": {
+  "site": "https://midwesternmarxpublishingpress.sellfy.store/classes"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Образовательные проекты и школы",
+  "page_status": "Изучаем взаимодействие",
+  "page_category": "B",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №158",
+  "notes": "Совпадает по теме или формату: Очень высокая: прямое совпадение формата — разбор первоисточников и теоретические курсы, как у thinkred; близкая ml-методология и антиимпериализм.. Проверено: GET https://www.youtube.com/@MidwesternMarx → 200; &lt;title&gt;Midwestern Marx - YouTube; og:title=«Midwestern Marx»; channelMetadataRenderer.title=«Midwes Совпадает по теме или формату: Семинары по классикам и диалектике. Проверено: HTTP 200; title «Marxism School» (sellfy-стор института, раздел classes). Домен midwesternmarx.com отдаёт 403 Cloudflare для curl"
+ }
+}

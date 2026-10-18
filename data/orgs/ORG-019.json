@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-019",
+ "asserted": false,
+ "identity": {
+  "name": "Общероссийский профсоюз образования",
+  "status": "Крупнейший отраслевой профсоюз работников образования, входит в ФНПР.",
+  "legal_form": "Отраслевой профсоюз"
+ },
+ "channels": {
+  "site": "https://ru.wikipedia.org/wiki/Общероссийский_профсоюз_образования"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Профсоюзы и рабочие объединения",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №19",
+  "notes": "Через него проходит вся практика школьных конфликтов и забастовок учителей. Наблюдаем."
+ }
+}

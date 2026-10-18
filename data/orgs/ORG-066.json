@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-066",
+ "asserted": false,
+ "identity": {
+  "name": "Товарищ Правда (Историк Антон Евстратов)",
+  "status": "Канал историка-марксиста Антона Евстратова, по собственному описанию живущего в Армении: лекции и беседы по истории, экономике, политике.",
+  "legal_form": "Авторский марксистский канал"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UC_6dtpv0kdvUTDMESAkrBZg"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №66",
+  "notes": "Совпадает по теме или формату: Авторский марксистский канал · СНГ. Проверено: yt-dlp, 5640 подписчиков, 11 октября 2026."
+ }
+}

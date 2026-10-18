@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-110",
+ "asserted": false,
+ "identity": {
+  "name": "International Publishers",
+  "status": "Историческое американское марксистское издательство (осн. 1924, исторически связано с Компартией США): классика марксизма-ленинизма, документальные сборники, теоретические работы.",
+  "legal_form": "Издательство марксистской литературы"
+ },
+ "channels": {
+  "site": "https://intpubnyc.com/"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Зарубежные каналы и медиапроекты",
+  "page_status": "Контакт не установлен",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №110",
+  "notes": "Совпадает по теме или формату: Средняя: издательский формат — снабжает первоисточниками и учебной литературой, пересекается с библиотечной функцией thinkred.. Проверено: GET https://intpubnyc.com/ → 200; &lt;title&gt;International Publishers; og:title=«International Publishers»."
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-128",
+ "asserted": false,
+ "identity": {
+  "name": "Oʻzbekiston XDP",
+  "status": "Официальный канал Народно-демократической партии Узбекистана (XDP) — партии, ведущей происхождение от Компартии Узбекской ССР.",
+  "legal_form": "Партия (наследник КП Узбекистана)"
+ },
+ "channels": {
+  "site": "https://t.me/uzbekistonxdp"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Telegram-каналы и блоги",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №128",
+  "notes": "Системная левая партия-наследник: даёт срез официального левого поля Узбекистана."
+ }
+}

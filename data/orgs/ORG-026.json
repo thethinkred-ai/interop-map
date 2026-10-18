@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-026",
+ "asserted": false,
+ "identity": {
+  "name": "Международная встреча коммунистических и рабочих партий",
+  "status": "Ежегодная международная конференция коммунистических партий; первое заседание — 1998 год, по инициативе КП Греции.",
+  "legal_form": "Международный формат"
+ },
+ "channels": {
+  "site": "https://ru.wikipedia.org/wiki/Международная_встреча_коммунистических_и_рабочих_партий"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Международные партии и форматы",
+  "page_status": "Контакт не установлен",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №26",
+  "notes": "Формат, в который мы пока не входим. Изучаем состав и правила участия."
+ }
+}

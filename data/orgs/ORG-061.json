@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-061",
+ "asserted": false,
+ "identity": {
+  "name": "Чёрное Яблоко",
+  "status": "Канал клуба «Ресентимент» — группы казахских марксистов; цель заявлена как популяризация социалистических идей и разработка современной левой теории применительно к Казахстану.",
+  "legal_form": "Марксистский клуб"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UCcv1tTe0BI3gvFID12rVhGg"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №61",
+  "notes": "Совпадает по теме или формату: Марксистский клуб · СНГ. Проверено: yt-dlp, 2160 подписчиков, 11 октября 2026."
+ }
+}

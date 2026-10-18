@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-107",
+ "asserted": false,
+ "identity": {
+  "name": "Friends of Socialist China",
+  "status": "Британо-международный проект (Кит Беннетт, Кенни Койл, Карлос Мартинес): разборы социалистического строительства Китая, антиимпериализм, солидарность; регулярные дайджесты и аналитические статьи.",
+  "legal_form": "Аналитический/просветительский проект по Китаю"
+ },
+ "channels": {
+  "site": "https://socialistchina.org/"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Зарубежные каналы и медиапроекты",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №107",
+  "notes": "Совпадает по теме или формату: Средне-высокая: аналитико-просветительский формат по одной из ключевых тем (китай/антиимпериализм) — может закрыть тематический блок thinkred.. Проверено: GET https://socialistchina.org/ → 200; &lt;title&gt;Latest posts - Friends of Socialist China; og:title совпадает."
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-069",
+ "asserted": false,
+ "identity": {
+  "name": "PCRM",
+  "status": "Канал Партии коммунистов Республики Молдова (ПКРМ): партийная повестка, сюжеты о протестах и левом движении в Молдове и Европе.",
+  "legal_form": "Партийный канал"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UC7iS4-hRVe2HDGvX5Tpec-Q"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №69",
+  "notes": "Совпадает по теме или формату: Партийный канал · СНГ. Проверено: yt-dlp, 8180 подписчиков, 11 октября 2026."
+ }
+}

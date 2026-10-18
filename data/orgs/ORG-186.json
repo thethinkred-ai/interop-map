@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-186",
+ "asserted": false,
+ "identity": {
+  "name": "ГМПР — Профсоюз действия. Челябинская область",
+  "status": "Объединение АКТИВНЫХ людей, которым не всё равно",
+  "legal_form": "Территориальная организация Горно-металлургического профсоюза России"
+ },
+ "channels": {
+  "site": "https://vk.com/gmpr74"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "ВКонтакте: сообщества",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №186",
+  "notes": "Совпадает по теме или формату: профсоюз. Проверено: HTTP 200; &lt;title&gt; = «ГМПР - Профсоюз действия. Челябинская область | Объединение АКТИВНЫХ людей, которым не вс"
+ }
+}

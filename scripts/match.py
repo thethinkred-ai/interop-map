@@ -1,0 +1,166 @@
+# -*- coding: utf-8 -*-
+"""Матч-отчёт: с чем две организации могут взаимодействовать прямо сейчас.
+
+Сопоставляет два паспорта и выдаёт: взаимодополняемость (offers × seeks),
+позиции по общим темам (только где обе стороны их заявили), общие типы
+деятельности, рекомендованные форматы и черновик первого обращения.
+Система не выносит вердиктов: расхождения показываются, а не оцениваются.
+
+Запуск:  python scripts/match.py ORG-000 ORG-029            # текст
+         python scripts/match.py ORG-000 ORG-029 --json     # JSON
+"""
+import json
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from validate import load_orgs, ROOT  # noqa: E402
+
+TAX = json.load(open(os.path.join(ROOT, 'taxonomy.json'), encoding='utf-8'))
+TOPIC = TAX['position_topic_labels']
+FMT = TAX['interaction_format_labels']
+ACT = TAX['activity_type_labels']
+
+# правила: общая деятельность → рекомендованный формат первого проекта
+ACTIVITY_FORMAT = [
+    ({'labour_conflicts', 'trade_unions'}, 'labour_monitoring_exchange'),
+    ({'publishing', 'media'}, 'exchange_publications'),
+    ({'research'}, 'joint_analytics'),
+    ({'education'}, 'joint_seminar'),
+    ({'translation'}, 'translation_project'),
+    ({'library_archive'}, 'joint_collection'),
+    ({'events'}, 'open_discussion'),
+    ({'software'}, 'caos_shared_goal'),
+]
+
+
+def fmt_list(items):
+    return [i.get('format') for i in (items or []) if i.get('format')]
+
+
+def match(a, b):
+    ca, cb = a.get('cooperation') or {}, b.get('cooperation') or {}
+    complement = sorted(
+        set(fmt_list(ca.get('offers'))) & set(fmt_list(cb.get('seeks'))) |
+        set(fmt_list(cb.get('offers'))) & set(fmt_list(ca.get('seeks'))))
+    pa = {p['topic']: p for p in a.get('positions') or [] if p.get('status') == 'asserted'}
+    pb = {p['topic']: p for p in b.get('positions') or [] if p.get('status') == 'asserted'}
+    both = sorted(set(pa) & set(pb))
+    positions = [{
+        'topic': t,
+        'a': pa[t].get('stance'),
+        'b': pb[t].get('stance'),
+        'a_source': (pa[t].get('sources') or [{}])[0].get('url'),
+        'b_source': (pb[t].get('sources') or [{}])[0].get('url'),
+    } for t in both]
+    acts_a = {x.get('type') for x in a.get('activities') or []}
+    acts_b = {x.get('type') for x in b.get('activities') or []}
+    common_acts = sorted(acts_a & acts_b)
+    formats = list(complement)
+    for pair, fmt in ACTIVITY_FORMAT:
+        if pair & acts_a and pair & acts_b and fmt not in formats:
+            formats.append(fmt)
+    if not formats:
+        formats = ['open_discussion']
+    open_questions = []
+    if not (a.get('channels') or {}).get('email') and not (a.get('channels') or {}).get('telegram'):
+        open_questions.append('У %s не указан публичный контакт' % a['identity']['name'])
+    if not (b.get('channels') or {}).get('email') and not (b.get('channels') or {}).get('telegram'):
+        open_questions.append('У %s не указан публичный контакт' % b['identity']['name'])
+    for t in sorted(set(pa) | set(pb)):
+        if t not in both:
+            open_questions.append('Тема «%s»: заявлена только одной стороной — уточнить у второй' % TOPIC.get(t, t))
+    return {
+        'pair': [a['id'], b['id']],
+        'names': [a['identity']['name'], b['identity']['name']],
+        'asserted': [a.get('asserted'), b.get('asserted')],
+        'complementary_formats': complement,
+        'shared_positions': positions,
+        'shared_positions_count': len(both),
+        'common_activities': [ACT.get(x, x) for x in common_acts],
+        'recommended_formats': [FMT.get(f, f) for f in formats],
+        'open_questions': open_questions,
+        'draft_letter': draft_letter(a, b, formats, common_acts),
+    }
+
+
+def draft_letter(a, b, formats, common_acts):
+    offer = FMT.get(formats[0], formats[0]) if formats else 'открытая дискуссия'
+    acts_ru = ', '.join(ACT.get(x, x) for x in common_acts[:2]) or 'деятельность в смежных направлениях'
+    return (
+        'Здравствуйте, {b}!\n'
+        '\n'
+        'Мы — {a} ({site}). Изучили ваши открытые материалы и видим общее поле: '
+        '{acts}.\n'
+        '\n'
+        'Предлагаем начать с малого и конкретного: {offer}. Наш вклад — {our_offer}; '
+        'что было бы полезно от вас?\n'
+        '\n'
+        'Если тема интересна — ответьте, и согласуем формат и сроки.'
+    ).format(
+        b=b['identity']['name'], a=a['identity']['name'],
+        site=(a.get('channels') or {}).get('site', ''),
+        acts=acts_ru,
+        offer=offer.lower(),
+        our_offer=((a.get('cooperation') or {}).get('offers') or [{}])[0].get('description', 'материалы и площадка'),
+    )
+
+
+def render_text(r):
+    a, b = r['names']
+    L = []
+    L.append('МАТЧ-ОТЧЁТ: %s ↔ %s' % (a, b))
+    L.append('=' * 60)
+    st = lambda f: 'утверждён' if f else 'черновик (не утверждён организацией)'
+    L.append('Статус паспортов: %s — %s; %s — %s' % (a, st(r['asserted'][0]), b, st(r['asserted'][1])))
+    L.append('')
+    L.append('▌ Взаимодополняемость (offers × seeks):')
+    L.append('  ' + (', '.join(FMT.get(f, f) for f in r['complementary_formats']) if r['complementary_formats'] else 'не заявлена — паспорта молчат, это не отказ'))
+    L.append('')
+    L.append('▌ Позиции по общим темам (обе стороны заявили): %d' % r['shared_positions_count'])
+    for p in r['shared_positions']:
+        L.append('  • %s' % TOPIC.get(p['topic'], p['topic']))
+        L.append('    %s: %s' % (a, (p['a'] or '')[:160]))
+        L.append('      %s' % (p['a_source'] or ''))
+        L.append('    %s: %s' % (b, (p['b'] or '')[:160]))
+        L.append('      %s' % (p['b_source'] or ''))
+        L.append('    → сопоставление формулировок остаётся за читателем; расхождение — предмет разговора, не приговор')
+    L.append('')
+    L.append('▌ Общая деятельность: ' + (', '.join(r['common_activities']) or 'не заявлена'))
+    L.append('')
+    L.append('▌ Рекомендованные форматы первого проекта:')
+    for f in r['recommended_formats']:
+        L.append('  - %s' % f)
+    L.append('')
+    L.append('▌ Открытые вопросы:')
+    for q in r['open_questions'] or ['нет']:
+        L.append('  - %s' % q)
+    L.append('')
+    L.append('▌ Черновик первого обращения:')
+    L.append('---')
+    L.append(r['draft_letter'])
+    L.append('---')
+    L.append('')
+    L.append('Методология: факты отделены от оценок; «не установлено» — штатное состояние.')
+    L.append('Этот отчёт — сопоставление заявленного, а не приговор о совместимости.')
+    return '\n'.join(L)
+
+
+def main(argv):
+    args = [a for a in argv[1:] if not a.startswith('--')]
+    as_json = '--json' in argv
+    if len(args) != 2:
+        print(__doc__)
+        return 2
+    orgs = load_orgs()
+    for x in args:
+        if x not in orgs:
+            print('Не найдено: %s' % x)
+            return 2
+    r = match(orgs[args[0]], orgs[args[1]])
+    print(json.dumps(r, ensure_ascii=False, indent=1) if as_json else render_text(r))
+    return 0
+
+
+if __name__ == '__main__':
+    sys.exit(main(sys.argv))

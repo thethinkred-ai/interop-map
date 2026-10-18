@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-085",
+ "asserted": false,
+ "identity": {
+  "name": "ВЕКТОР Библиотека",
+  "status": "Видеобиблиотека озвучек книг и статей; проект заявлен как помощь встающим на путь освоения марксизма.",
+  "legal_form": "Видеобиблиотека"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UCBOp6mi_nyyNDG8_83-4bPQ"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №85",
+  "notes": "Совпадает по теме или формату: Видеобиблиотека · Россия. Проверено: yt-dlp, 7820 подписчиков, 11 октября 2026."
+ }
+}

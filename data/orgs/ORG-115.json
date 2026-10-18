@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-115",
+ "asserted": false,
+ "identity": {
+  "name": "ПРОСТО МАРКСИЗМ (JUST MARXISM)",
+  "status": "Марксизм без догматизма; меню, видео, книги, чат — просвещение и дискуссии.",
+  "legal_form": "теоретический канал"
+ },
+ "channels": {
+  "site": "https://t.me/redinform"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Telegram-каналы и блоги",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №115",
+  "notes": "Совпадает по теме или формату: Проверено: https://t.me/redinform → HTTP 200, публичная страница отдаёт название и описание: 1 070 подписчиков; «Марксизм без догматизма и фанатизма. Место где н"
+ }
+}

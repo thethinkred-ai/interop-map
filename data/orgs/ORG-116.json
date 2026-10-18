@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-116",
+ "asserted": false,
+ "identity": {
+  "name": "Absolute studies | Антон Сюткин",
+  "status": "Материалистическая диалектика после марксизма, левое шеллингианство; статьи и выступления.",
+  "legal_form": "авторский теоретический блог"
+ },
+ "channels": {
+  "site": "https://t.me/absolutestudies"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Telegram-каналы и блоги",
+  "page_status": "Расхождения по методу",
+  "page_category": "C",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №116",
+  "notes": "Совпадает по теме или формату: Проверено: https://t.me/absolutestudies → HTTP 200, публичная страница отдаёт название и описание: 3 047 подписчиков; «материалистическая диалектика после маркси"
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-105",
+ "asserted": false,
+ "identity": {
+  "name": "In Defense of Communism (idcommunism.com)",
+  "status": "Портал греческого марксиста-ленинца Никоса Моттаса: переводы и статьи по теории, разборы антикоммунизма, антиимпериализм, материалы о социалистическом строительстве. Собственный анализ, не агрегатор.",
+  "legal_form": "Медиапроект / идеологический портал"
+ },
+ "channels": {
+  "site": "http://idcommunism.com/"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Зарубежные каналы и медиапроекты",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №105",
+  "notes": "Совпадает по теме или формату: Средне-высокая: идеологический портал с авторскими разборами и переводами — полезен как источник и образец идеологического контента.. Проверено: GET http://idcommunism.com/ → 200; &lt;title&gt;In Defense of Communism."
+ }
+}

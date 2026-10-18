@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-052",
+ "asserted": false,
+ "identity": {
+  "name": "Lenin Crew",
+  "status": "Марксистский интернет-журнал: статьи и видео по политэкономии, теории партии, истории, философии, организация кружков и исследовательских групп.",
+  "legal_form": "марксистский интернет-журнал"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UCVJsRLM9_X4nK3iM6af3gEA"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №52",
+  "notes": "Совпадает по теме или формату: Практически наш аналог — теория + кружки + подготовка кадров.. Проверено: GET канала → HTTP 200, &lt;title&gt;«Lenin Crew - YouTube»&gt;; yt-dlp: подписчиков 12600, описание «марксистский интернет-журнал… организация кружков». Сайт l"
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-033",
+ "asserted": false,
+ "identity": {
+  "name": "ЗабастКом",
+  "status": "Общественный агрегатор новостей о забастовках и трудовых конфликтах в России и СНГ (с 2021), с разделами по причинам конфликтов.",
+  "legal_form": "лента трудовых конфликтов"
+ },
+ "channels": {
+  "site": "https://www.zabastcom.org/"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Медиа-проекты и площадки",
+  "page_status": "Изучаем взаимодействие",
+  "page_category": "B",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №33",
+  "notes": "Совпадает по теме или формату: Прямое совпадение с лентой трудовых конфликтов thinkred Проверено: HTTP 200; title &#x27;Забастком агрегатор новостей о трудовых конфликтах - рабочие забастовки в России и СНГ&#x27;; /about → &#x27;О проекте - сервис агрегации новос"
+ }
+}

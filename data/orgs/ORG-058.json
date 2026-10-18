@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-058",
+ "asserted": false,
+ "identity": {
+  "name": "POLIGRAF RED",
+  "status": "Видеожурнал левого (марксистского) толка из Минска. Авторы описывают себя как группу энтузиастов, работающих на поле «культурной гегемонии»; сайт poligraf.red.",
+  "legal_form": "Левый видеожурнал"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UCb-L8eD6oBlqlmPAWomjDWQ"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №58",
+  "notes": "Совпадает по теме или формату: Левый видеожурнал · СНГ. Проверено: yt-dlp, 22400 подписчиков, 11 октября 2026."
+ }
+}

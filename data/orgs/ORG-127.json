@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-127",
+ "asserted": false,
+ "identity": {
+  "name": "KP Moldova",
+  "status": "Канал популярной в Молдове газеты «Коммунист»/KP, связанной с Партией коммунистов Республики Молдова; политические новости левого спектра.",
+  "legal_form": "Коммунистическая газета / медиа"
+ },
+ "channels": {
+  "site": "https://t.me/KpMoldova"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Telegram-каналы и блоги",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №127",
+  "notes": "Крупный левый медиаресурс Молдовы — освещает повестку ПКРМ."
+ }
+}

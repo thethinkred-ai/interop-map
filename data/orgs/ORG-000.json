@@ -1,0 +1,83 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-000",
+ "asserted": false,
+ "identity": {
+  "name": "ThinkRed",
+  "aliases": ["Think Red", "ТинкРед", "thethinkred"],
+  "country": "интернет-проект, русскоязычное пространство",
+  "geography": "онлайн; участники — постсоветское пространство",
+  "languages": ["русский"],
+  "legal_form": "неформальное образовательное объединение; юридического лица нет",
+  "founded": "2026",
+  "status": "действует"
+ },
+ "channels": {
+  "site": "https://thinkred.ru",
+  "telegram": "https://t.me/thinkred_marx",
+  "vk": "https://vk.com/thinkred",
+  "youtube": "https://www.youtube.com/@TheThinkRed",
+  "email": "thethinkred@gmail.com",
+  "other": ["https://dzen.ru/thinkred", "https://github.com/thethinkred-ai"]
+ },
+ "positions": [
+  {
+   "topic": "self_definition",
+   "stance": "Ортодоксальный марксизм-ленинизм, вне фракционных платформ: «Мы не троцкисты, не сталинисты и не маоисты: ThinkRed стоит на позициях ортодоксального марксизма-ленинизма, а не на платформе какой-либо из фракций рабочего движения».",
+   "status": "discussed",
+   "sources": [
+    {"url": "https://thinkred.ru/cooperation/", "quote": "Мы не троцкисты, не сталинисты и не маоисты: ThinkRed стоит на позициях ортодоксального марксизма-ленинизма…", "date": "2026-10"}
+   ]
+  },
+  {
+   "topic": "technology_ai_automation",
+   "stance": "ИИ — инструмент симметричной проверки политической аргументации; различение уровней анализа: от логики до классового содержания.",
+   "status": "discussed",
+   "sources": [
+    {"url": "https://thinkred.ru/blog/iskusstvennyy-intellekt-vyyavlenie-opportunizma.html", "date": "2026-09"}
+   ]
+  }
+ ],
+ "activities": [
+  {"type": "education", "description": "Три бесплатных курса на Stepik: «Капитал» Маркса (52 раздела), «Наука логики» Гегеля (79 уроков, 137 шагов), «От философии к научному социализму» (7 уровней, 101 текст)", "proofs": ["https://thinkred.ru/course/"]},
+  {"type": "media", "description": "Блог: статьи для входа в тему и классовый анализ текущих событий", "proofs": ["https://thinkred.ru/blog/"]},
+  {"type": "library_archive", "description": "Библиотека: методическое руководство В. С. Безруковой и другие тексты по методологии исследования", "proofs": ["https://thinkred.ru/library/"]},
+  {"type": "labour_conflicts", "description": "«Лента конфликтов»: автоматический мониторинг трудовых конфликтов и рабочего движения, 30+ источников", "proofs": ["https://thinkred.ru/blog/events.html"]},
+  {"type": "software", "description": "CAOS — свободная платформа коллективного анализа и целеполагания (MIT)", "proofs": ["https://github.com/thethinkred-ai/caos-platform"]},
+  {"type": "events", "description": "Экономическая игра-симулятор: от феодализма до коммунизма", "proofs": ["https://thinkred.ru/game/"]}
+ ],
+ "cooperation": {
+  "offers": [
+   {"format": "exchange_publications", "description": "Размещение статей партнёров в блоге и обмен материалами"},
+   {"format": "mutual_review", "description": "Рецензирование методических и теоретических материалов"},
+   {"format": "joint_seminar", "description": "Совместные открытые семинары и разборы по первоисточникам"},
+   {"format": "labour_monitoring_exchange", "description": "Обмен источниками и сюжетами для мониторинга трудовых конфликтов"},
+   {"format": "caos_shared_goal", "description": "CAOS как общий инструмент коллективного целеполагания (свободное ПО)"}
+  ],
+  "seeks": [
+   {"format": "mutual_review", "description": "Критика наших учебных материалов и разборов"},
+   {"format": "labour_monitoring_exchange", "description": "Русскоязычные источники о трудовых конфликтах"},
+   {"format": "joint_seminar", "description": "Совместные эфиры и семинары с организациями движения"},
+   {"format": "open_discussion", "description": "Содержательные дискуссии по методу и тактике"}
+  ],
+  "conditions": [
+   "Идейная самостоятельность: сотрудничество не означает принятия чужой программы",
+   "Цитаты — по первоисточникам; позиции партнёра не искажаются",
+   "Право на аргументированную критику в обе стороны",
+   "Совместные документы — только согласованные положения"
+  ],
+  "red_lines": [
+   "Не входим в блоки «против кого-то» без общей программы",
+   "Не подписываем совместные заявления с непроверенными цитатами"
+  ]
+ },
+ "visibility": {"level": "public", "contacts_public": true},
+ "meta": {
+  "list_section": "",
+  "page_status": "",
+  "page_category": null,
+  "date_checked": "2026-10-18",
+  "source": "паспорт-черновик (E:\\Sviazi\\Паспорт ThinkRed — черновик для утверждения.md)",
+  "notes": "ЧЕРНОВИК: identity и activities — по проверяемым фактам; позиции и рамки сотрудничества требуют утверждения владельцем ThinkRed. asserted=true будет выставлен после утверждения и подтверждения через публичный канал."
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-104",
+ "asserted": false,
+ "identity": {
+  "name": "Proletarian TV (ProletarianTV)",
+  "status": "Телевизионный канал Коммунистической партии Великобритании (марксистско-ленинской) — CPGB-ML. Лекции, повестки дня, разборы марксистской теории и антиимпериализма, редакционные выпуски. Пример разбора",
+  "legal_form": "Партийный образовательный/аналитический канал"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/@proletariantv"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Зарубежные каналы и медиапроекты",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №104",
+  "notes": "Совпадает по теме или формату: Высокая: сочетание теории и политического разбора от партийной структуры — близко к модели «thinkred + партийная аналитика».. Проверено: GET https://www.youtube.com/@proletariantv → 200; &lt;title&gt;ProletarianTV - YouTube; og:title=«ProletarianTV»."
+ }
+}

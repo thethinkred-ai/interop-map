@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-129",
+ "asserted": false,
+ "identity": {
+  "name": "RedKazakh",
+  "status": "Борьба с современными историческими мифами и фальсификацией истории, разжигающими межнациональную рознь; историческое просвещение.",
+  "legal_form": "Историко-просветительский канал"
+ },
+ "channels": {
+  "site": "https://t.me/RedKazakh"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Telegram-каналы и блоги",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №129",
+  "notes": "Историко-просветительская линия о советском наследии в Казахстане."
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-086",
+ "asserted": false,
+ "identity": {
+  "name": "Научный Коммунизм",
+  "status": "Лекции и ответы по диалектике (А. П. Сегал), история «Промпартии».",
+  "legal_form": "Теоретический канал"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UCfCGeJPO98EL5S4ysi4kyxw"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №86",
+  "notes": "Совпадает по теме или формату: Теоретический канал · Россия. Проверено: yt-dlp, 3050 подписчиков, 11 октября 2026."
+ }
+}

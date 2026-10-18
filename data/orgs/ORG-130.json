@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-130",
+ "asserted": false,
+ "identity": {
+  "name": "Марксизм и критическая теория",
+  "status": "Книги и статьи по марксизму и критической теории — публикация первоисточников и разборов.",
+  "legal_form": "Теоретический канал"
+ },
+ "channels": {
+  "site": "https://t.me/marxismct"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Telegram-каналы и блоги",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №130",
+  "notes": "Прямое совпадение: публикация текстов классиков и критической теории."
+ }
+}

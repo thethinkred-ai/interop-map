@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-126",
+ "asserted": false,
+ "identity": {
+  "name": "Компартия Армении (Հայկոմկուս)",
+  "status": "Официальный канал Коммунистической партии Армении (Հայաստանի Կոմունիստական կուսակցություն): деятельность и пропаганда партии.",
+  "legal_form": "Коммунистическая партия Армении"
+ },
+ "channels": {
+  "site": "https://t.me/komkus1920"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Telegram-каналы и блоги",
+  "page_status": "Контакт не установлен",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №126",
+  "notes": "Зарегистрированная компартия Армении, но аудитория канала мала. Наблюдаем."
+ }
+}

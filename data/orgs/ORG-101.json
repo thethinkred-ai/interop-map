@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-101",
+ "asserted": false,
+ "identity": {
+  "name": "Мирные люди",
+  "status": "Белорусская инициатива: площадка обсуждения политики и экономики Беларуси.",
+  "legal_form": "Гражданская инициатива"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UCd5uL281zYk0BP6C9qbJUDg"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №101",
+  "notes": "Совпадает по теме или формату: Гражданская инициатива · СНГ. Проверено: yt-dlp, 742 подписчиков, 11 октября 2026."
+ }
+}

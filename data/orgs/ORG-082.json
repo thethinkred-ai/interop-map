@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-082",
+ "asserted": false,
+ "identity": {
+  "name": "Мыслетехническая Школа",
+  "status": "Видеозаписи по «Науке логики» Гегеля (в понимании О. С. Анисимова) и мыслетехнической методологии.",
+  "legal_form": "Методология/логика Гегеля"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UCZFrlTr_7vZHV1IOF4X9Fmg"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №82",
+  "notes": "Совпадает по теме или формату: Методология/логика Гегеля · Россия. Проверено: yt-dlp, 5060 подписчиков, 11 октября 2026."
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-050",
+ "asserted": false,
+ "identity": {
+  "name": "Рабочая Академия",
+  "status": "Канал Фонда Рабочей Академии: лекции по политической экономии, философии и классике (Маркс, Ленин), Красный университет.",
+  "legal_form": "образовательный проект / классика"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UC4Y0FKHve0VoiAq_4Ybx-bg"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №50",
+  "notes": "Совпадает по теме или формату: Совпадает с нашим форматом: изучение «капитала» и философской классики в рабочих аудиториях.. Проверено: GET канала → HTTP 200, &lt;title&gt;«Рабочая Академия - YouTube»&gt;; yt-dlp: подписчиков 46600. Связан с frafond.ru (Фонд содействия обучению рабочих)."
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-102",
+ "asserted": false,
+ "identity": {
+  "name": "Liberation School",
+  "status": "Образовательное подразделение Партии за социализм и освобождение (PSL): курсы, учебные планы, руководства по изучению первоисточников, теоретические лекции. Прямой аналог образовательной модели ThinkR",
+  "legal_form": "Образовательная платформа (курсы, учебные планы)"
+ },
+ "channels": {
+  "site": "https://liberationschool.org/"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Зарубежные каналы и медиапроекты",
+  "page_status": "Изучаем взаимодействие",
+  "page_category": "B",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №102",
+  "notes": "Совпадает по теме или формату: Очень высокая: курсы и study guides по первоисточникам — почти точное совпадение формата с курсами thinkred.. Проверено: GET https://liberationschool.org/ → 200; &lt;title&gt;Liberation School – courses, study guides, analysis &amp;amp; more; og:title совпадает."
+ }
+}

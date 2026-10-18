@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-140",
+ "asserted": false,
+ "identity": {
+  "name": "Политэкономия — Колташов",
+  "status": "Канал Василия Колташова, директора Института нового общества: политэкономия, экономический анализ.",
+  "legal_form": "Политэкономический авторский канал"
+ },
+ "channels": {
+  "site": "https://t.me/vkoltashov"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Telegram-каналы и блоги",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №140",
+  "notes": "Критическая политэкономия — совпадает с нашим аналитическим направлением."
+ }
+}

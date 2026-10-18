@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-073",
+ "asserted": false,
+ "identity": {
+  "name": "Марксово Поле",
+  "status": "Марксистский просветительский канал: цитаты классиков, разборы экономики (в т.ч. с Олегом Комоловым), критика буржуазных мифов.",
+  "legal_form": "Просветительский марксистский канал"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UCPKon-wfj7UeLxuxUspcF_w"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №73",
+  "notes": "Совпадает по теме или формату: Просветительский марксистский канал · Россия. Проверено: yt-dlp, 3750 подписчиков, 11 октября 2026."
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-054",
+ "asserted": false,
+ "identity": {
+  "name": "Клуб «Политпросвет»",
+  "status": "Лекции открытого клуба «Политпросвет» (с 2011 г.): философия марксизма, политическая экономия, теория идеологии, история социалистической политэкономии.",
+  "legal_form": "образовательный клуб / марксистская теория"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UCgJrvEnZcxk_a_04O_Zny6Q"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Изучаем взаимодействие",
+  "page_category": "B",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №54",
+  "notes": "Совпадает по теме или формату: Классический политпросвет-формат — прямой аналог нашей образовательной миссии.. Проверено: GET канала → HTTP 200, &lt;title&gt;«Клуб «Политпросвет» - YouTube»&gt;; yt-dlp: подписчиков 6220. Видео: «История развития социалистической политической эконо"
+ }
+}

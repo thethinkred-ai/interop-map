@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-167",
+ "asserted": false,
+ "identity": {
+  "name": "International Marxist University (IMT / In Defence of Marxism)",
+  "status": "Ежегодная многодневная международная онлайн-школа (Marxist University / International Marxist University) с лекциями по политэкономии, философии, истории; IMU22 — 7333 регистрации из 144 стран.",
+  "legal_form": "International Marxist Tendency / сайт In Defence of Marxism"
+ },
+ "channels": {
+  "site": "https://university.marxist.com/en/"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Образовательные проекты и школы",
+  "page_status": "Расхождения по методу",
+  "page_category": "C",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №167",
+  "notes": "Совпадает по теме или формату: Большой онлайн-лекторий по марксизму; троцкистская линия. По методу расходимся: троцкистская линия — не наша платформа. Проверено: HTTP 200; title «International Marxist University 2022» (university.marxist.com); marxist.com — 200 «In Defence of Marxism»"
+ }
+}

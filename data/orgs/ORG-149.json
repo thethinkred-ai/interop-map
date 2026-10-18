@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-149",
+ "asserted": false,
+ "identity": {
+  "name": "АМБ — марксистская агитация и пропаганда",
+  "status": "Канал марксистской агитации и пропаганды, связан с Агитботом (@agitbot_bot) и сайтом agit.red.",
+  "legal_form": "Агитпроп-проект"
+ },
+ "channels": {
+  "site": "https://t.me/agitbrigade"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Telegram-каналы и блоги",
+  "page_status": "Изучаем взаимодействие",
+  "page_category": "B",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №149",
+  "notes": "Организация разрозненных агитаторов + аналитика левого Telegram — практический союзный интерес."
+ }
+}

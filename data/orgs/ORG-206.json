@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-206",
+ "asserted": false,
+ "identity": {
+  "name": "Народно-демократическая партия Узбекистана (НДПУ / XDP)",
+  "status": "Зарегистрированная партия, официально ведущая происхождение от Компартии Узбекистана; парламентская фракция, социально-ориентированная риторика.",
+  "legal_form": "Системная парламентская партия (наследница КПУ)"
+ },
+ "channels": {
+  "site": "https://xdp.uz/"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Страны СНГ: организации и проекты",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №206",
+  "notes": "Совпадает по теме или формату: низкая: связь с коммунистической традицией историческая, метод — парламентский Проверено: GET https://xdp.uz/ -&gt; HTTP 200; &lt;title&gt;Bosh sahifa | Oʻzbekiston Xalq demokratik partiyasi&lt;/title&gt;; GET https://xdp.uz/ru -&gt; HTTP"
+ }
+}

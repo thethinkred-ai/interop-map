@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-109",
+ "asserted": false,
+ "identity": {
+  "name": "BreakThrough News",
+  "status": "Независимое левое медиа (Rania Khalek, Eugene Puryear и др.): антиимпериалистические разборы, репортажи из зон конфликтов, классовый анализ. Собственная аналитика и корреспонденты, а не перепост.",
+  "legal_form": "Медиапроект / политическая аналитика"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/@BreakthroughNews"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Зарубежные каналы и медиапроекты",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №109",
+  "notes": "Совпадает по теме или формату: Средняя: новостная/аналитическая, не образовательная линия; дополняет thinkred по повестке антиимпериализма и трудовых конфликтов.. Проверено: GET https://www.youtube.com/@BreakthroughNews → 200; &lt;title&gt;BreakThrough News - YouTube; og:title=«BreakThrough News»."
+ }
+}

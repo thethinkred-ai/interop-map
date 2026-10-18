@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-065",
+ "asserted": false,
+ "identity": {
+  "name": "СОЦИАЛИСТИЧЕСКАЯ АРМЕНИЯ",
+  "status": "Небольшой армянский канал о социализме и его строительстве: обращения, песни, постановка вопроса «Возможен ли социализм в Армении?»",
+  "legal_form": "Небольшой социалистический канал"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UCdUdUqREb-fAYrtZO23cSCA"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №65",
+  "notes": "Совпадает по теме или формату: Небольшой социалистический канал · СНГ. Проверено: yt-dlp, 11 подписчиков, 11 октября 2026."
+ }
+}

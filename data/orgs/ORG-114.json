@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-114",
+ "asserted": false,
+ "identity": {
+  "name": "Союз марксистов",
+  "status": "«Союз марксистов» — организация, ставящая целью создание коммунистической партии; теория и практика.",
+  "legal_form": "политическая организация"
+ },
+ "channels": {
+  "site": "https://t.me/marx_union"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Telegram-каналы и блоги",
+  "page_status": "Расхождения по методу",
+  "page_category": "C",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №114",
+  "notes": "Совпадает по теме или формату: Проверено: https://t.me/marx_union → HTTP 200, публичная страница отдаёт название и описание: 10 961 подписчик; «Союз марксистов - политическая организация, коне"
+ }
+}

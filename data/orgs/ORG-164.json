@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-164",
+ "asserted": false,
+ "identity": {
+  "name": "Marx Memorial Library &amp; Workers&#x27; School",
+  "status": "Онлайн- и офлайн-курсы: Introduction to Marxism, Trade Unions, Class and Power, Capital Reading Group (20+ занятий по I тому «Капитала»), читальный зал и архив. Центр рабочего образования и изучения м",
+  "legal_form": "Marx Memorial Library (Лондон, осн. 1933)"
+ },
+ "channels": {
+  "site": "https://www.marx-memorial-library.org.uk/"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Образовательные проекты и школы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №164",
+  "notes": "Совпадает по теме или формату: Курс по «капиталу», онлайн+очно, первоисточники. Проверено: HTTP 200; title «Welcome to Marx Memorial Library»; /education/current-and-forthcoming-courses — 200 (Online Courses); Capital Reading Group 2026-27"
+ }
+}

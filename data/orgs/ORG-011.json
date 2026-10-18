@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-011",
+ "asserted": false,
+ "identity": {
+  "name": "«Трудовая Россия»",
+  "status": "Учреждено в октябре 1992 года по решению пленума РКРП; зарегистрировано Минюстом 9 января 1996 года.",
+  "legal_form": "Движение"
+ },
+ "channels": {
+  "site": "https://ru.wikipedia.org/wiki/Трудовая_Россия"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Несистемные коммунистические партии и движения",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №11",
+  "notes": "Историческая структура уличного протеста 1990-х. Ценна как опыт, а не как сегодняшняя сила."
+ }
+}

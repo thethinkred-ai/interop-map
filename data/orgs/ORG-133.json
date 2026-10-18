@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-133",
+ "asserted": false,
+ "identity": {
+  "name": "Свободное Время",
+  "status": "Изучение и распространение диалектического материализма, история коммунистического движения.",
+  "legal_form": "Просветительский канал"
+ },
+ "channels": {
+  "site": "https://t.me/SVremya"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Telegram-каналы и блоги",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №133",
+  "notes": "Диамат и история движения — совпадает с нашим теоретическим ядром."
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-208",
+ "asserted": false,
+ "identity": {
+  "name": "Коммунистическая партия Азербайджана (AzKP)",
+  "status": "Коммунистическая партия Азербайджана (осн. 1993): программа, новости, сотрудничество с СКП-КПСС. Основной домен azkp.org не отвечает, живое зеркало — azkp.yazyarat.com.",
+  "legal_form": "Коммунистическая партия (незарегистрированная/оппозиционная)"
+ },
+ "channels": {
+  "site": "https://azkp.yazyarat.com/haqqimizda"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Страны СНГ: организации и проекты",
+  "page_status": "Изучаем взаимодействие",
+  "page_category": "B",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №208",
+  "notes": "Совпадает по теме или формату: марксистско-ленинская самоидентификация, практика ограничена условиями Азербайджана Проверено: GET https://azkp.yazyarat.com/haqqimizda -&gt; HTTP 200; &lt;title&gt;Haqqımızda AzKP.org&lt;/title&gt;; основной домен https://www.azkp.org/ -&gt;"
+ }
+}

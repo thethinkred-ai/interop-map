@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-060",
+ "asserted": false,
+ "identity": {
+  "name": "Красная Юрта",
+  "status": "Казахстанский левый медиапроект (сайт redyurt.kz): марксистская и социалистическая повестка, история, разборы.",
+  "legal_form": "Левый медиапроект"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UCRnsUswYmQh0T8DmwzNy3Mw"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №60",
+  "notes": "Совпадает по теме или формату: Левый медиапроект · СНГ. Проверено: yt-dlp, 39800 подписчиков, 11 октября 2026."
+ }
+}

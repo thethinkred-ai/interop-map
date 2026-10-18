@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-155",
+ "asserted": false,
+ "identity": {
+  "name": "Публичная библиотека (publ.lib.ru) — Гегель",
+  "status": "Отсканированное классическое собрание сочинений Гегеля (т. 1 «Энциклопедия философских наук», 1929, под ред. Деборина и Рязанова, Институт К. Маркса и Ф. Энгельса) и др. тома.",
+  "legal_form": "онлайн-библиотека сканов (djvu)"
+ },
+ "channels": {
+  "site": "https://publ.lib.ru/ARCHIVES/G/GEGEL&#x27;_Georg_Vil&#x27;gel&#x27;m_Fridrih/_Gegel&#x27;_G.V.F..html"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Библиотеки и архивы первоисточников",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №155",
+  "notes": "Совпадает по теме или формату: Первоисточник гегеля в русских переводах (историямл-издание) Проверено: 200"
+ }
+}

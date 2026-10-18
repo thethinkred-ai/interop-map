@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-016",
+ "asserted": false,
+ "identity": {
+  "name": "Конфедерация труда России",
+  "status": "Второе по численности профобъединение страны после ФНПР; известна активным использованием разных методов борьбы за права работников.",
+  "legal_form": "Профобъединение"
+ },
+ "channels": {
+  "site": "https://ru.wikipedia.org/wiki/Конфедерация_труда_России"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Профсоюзы и рабочие объединения",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №16",
+  "notes": "Интересна правовая работа и коллективные действия. Наблюдаем."
+ }
+}

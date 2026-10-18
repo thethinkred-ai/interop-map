@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-141",
+ "asserted": false,
+ "identity": {
+  "name": "Политэконом",
+  "status": "Канал «Настоящая политическая экономия»: политэкономический разбор.",
+  "legal_form": "Политэкономический канал"
+ },
+ "channels": {
+  "site": "https://t.me/politekonom"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Telegram-каналы и блоги",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №141",
+  "notes": "Тема политэкономии — прямое тематическое совпадение."
+ }
+}

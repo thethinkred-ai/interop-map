@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-010",
+ "asserted": false,
+ "identity": {
+  "name": "«За новый социализм»",
+  "status": "Российское общественное движение социалистического толка.",
+  "legal_form": "Общественное движение"
+ },
+ "channels": {
+  "site": "https://ru.wikipedia.org/wiki/За_новый_социализм"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Несистемные коммунистические партии и движения",
+  "page_status": "Контакт не установлен",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №10",
+  "notes": "Сведений о практической работе мало. Сначала разбор, потом разговор."
+ }
+}

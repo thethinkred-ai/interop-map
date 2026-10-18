@@ -1,0 +1,15 @@
+[
+ {
+  "schema_version": "1.0",
+  "participants": ["ORG-000", "ORG-029"],
+  "type": "joint_project",
+  "proof": {
+   "url": "https://redstarter.ru/",
+   "quote": "Переписка с Леонидом Ивановым (Redstarter), октябрь 2026: аккаунт ThinkRed активирован, проект размещается, обе стороны объявили информационное партнёрство",
+   "date": "2026-10-06"
+  },
+  "period": "с 2026-10",
+  "confidence": "high",
+  "note": "Размещение карточки проекта ThinkRed на redstarter.ru; на 18.10.2026 проект на модерации"
+ }
+]

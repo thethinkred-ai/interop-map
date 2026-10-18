@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-183",
+ "asserted": false,
+ "identity": {
+  "name": "РКРП — Коммунисты Кузбасса",
+  "status": "Группа создана для всех сторонников коммунистических и социалистических взглядов в Кемеровской области., РКРП КУЗБАСС - https://t.me/+7YUB5VENO1ViZDAy...",
+  "legal_form": "Региональная группа сторонников РКРП (Кемеровская область)"
+ },
+ "channels": {
+  "site": "https://vk.com/club4049155"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "ВКонтакте: сообщества",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №183",
+  "notes": "Совпадает по теме или формату: партия (регион). Проверено: HTTP 200; &lt;title&gt; = «☭ РКРП - КОММУНИСТЫ КУЗБАССА ☭ | Группа создана для всех сторонников коммунистических и с"
+ }
+}

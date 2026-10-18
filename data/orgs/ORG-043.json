@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-043",
+ "asserted": false,
+ "identity": {
+  "name": "Рабочее ТВ",
+  "status": "Канал рабочего движения: регулярные кружки по изучению «Капитала» (том 3) и «Науки логики» Гегеля, материалы о положении рабочих.",
+  "legal_form": "рабочее движение / кружки-первоисточники"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UCeBQXJ03ZeF7pqLYJV-yu_w"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Изучаем взаимодействие",
+  "page_category": "B",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №43",
+  "notes": "Совпадает по теме или формату: Буквально наш формат — кружки по «капиталу» и «науке логики» в прямом эфире.. Проверено: GET канала → HTTP 200, &lt;title&gt;«Рабочее ТВ - YouTube»&gt;; yt-dlp: подписчиков 866. Видео: «Кружок по изучению Капитала. Занятие 77», «Кружок по Науке лог"
+ }
+}

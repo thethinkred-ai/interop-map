@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-177",
+ "asserted": false,
+ "identity": {
+  "name": "«КМФК» — Марксистский кружок в Красноярске",
+  "status": "Публичное сообщество ВКонтакте; текст описания не отдаётся без авторизации.",
+  "legal_form": "Кружок для изучения марксистской литературы"
+ },
+ "channels": {
+  "site": "https://vk.com/marx_kr"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "ВКонтакте: сообщества",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №177",
+  "notes": "Совпадает по теме или формату: кружки / просвещение. Проверено: HTTP 200; &lt;title&gt; = ««КМФК» - Марксистский кружок в Красноярске | | 2026 | ВКонтакте»"
+ }
+}

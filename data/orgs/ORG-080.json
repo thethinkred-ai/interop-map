@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-080",
+ "asserted": false,
+ "identity": {
+  "name": "Культпросвет",
+  "status": "Канал, разбирающий кино, музыку и массовую культуру через призму классовой борьбы («искусство под микроскопом классовой борьбы»).",
+  "legal_form": "Марксистский культурный разбор"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UC3Olillwwf552Ehwx8uuUUA"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №80",
+  "notes": "Совпадает по теме или формату: Марксистский культурный разбор · Россия. Проверено: yt-dlp, 37800 подписчиков, 11 октября 2026."
+ }
+}

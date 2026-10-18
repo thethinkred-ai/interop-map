@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-165",
+ "asserted": false,
+ "identity": {
+  "name": "Communist University",
+  "status": "Ежегодная гибридная школа-конференция (неделя сессий: политэкономия, философия, история, стратегия) с упором на открытую дискуссию; онлайн через Zoom. Платные билеты.",
+  "legal_form": "CPGB (Communist Party of Great Britain, вокруг Weekly Worker)"
+ },
+ "channels": {
+  "site": "https://www.communistuniversity.uk/"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Образовательные проекты и школы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №165",
+  "notes": "Совпадает по теме или формату: Тематическая школа, лекции+дискуссии. Проверено: HTTP 200; title «Communist University»; расписание — communistuniversity.uk/timetable"
+ }
+}

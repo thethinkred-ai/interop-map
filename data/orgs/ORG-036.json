@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-036",
+ "asserted": false,
+ "identity": {
+  "name": "Tricontinental: Institute for Social Research",
+  "status": "Институт социальных исследований: досье, аналитика по антиимпериализму и левым движениям.",
+  "legal_form": "аналитический центр / медиа"
+ },
+ "channels": {
+  "site": "https://thetricontinental.org/"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Медиа-проекты и площадки",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №36",
+  "notes": "Совпадает по теме или формату: Аналитика, классовый подход. Проверено: HTTP 200; title &#x27;Tricontinental: Institute for Social Research&#x27;"
+ }
+}

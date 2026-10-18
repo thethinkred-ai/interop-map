@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-067",
+ "asserted": false,
+ "identity": {
+  "name": "Партия коммунистов Кыргызстана",
+  "status": "Официальный YouTube-канал Партии коммунистов Кыргызстана.",
+  "legal_form": "Партийный канал"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UCmOC5T3zXQDkY55-zgG8kRw"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №67",
+  "notes": "Совпадает по теме или формату: Партийный канал · СНГ. Проверено: yt-dlp, 11 подписчиков, 11 октября 2026."
+ }
+}

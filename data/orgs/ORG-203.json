@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-203",
+ "asserted": false,
+ "identity": {
+  "name": "«Կայծ / Искра» (Armenian Iskra)",
+  "status": "Армянский марксистский канал: международные и внутренние новости Армении с разбором и анализом с марксистских позиций; отдельный канал статей.",
+  "legal_form": "Марксистский медиа-проект"
+ },
+ "channels": {
+  "site": "https://t.me/armiskra"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Страны СНГ: организации и проекты",
+  "page_status": "Изучаем взаимодействие",
+  "page_category": "B",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №203",
+  "notes": "Совпадает по теме или формату: прямая марксистская методология, классовый анализ новостей Проверено: GET https://t.me/armiskra -&gt; HTTP 200; og:title «Կայծ/Искра», og:description «...разбором и анализом с марксистских позиций / ...դ"
+ }
+}

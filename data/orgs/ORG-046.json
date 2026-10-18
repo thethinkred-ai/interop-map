@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-046",
+ "asserted": false,
+ "identity": {
+  "name": "Простые числа",
+  "status": "Политэкономический канал о современном капитализме: классовый анализ экономики, разбор налогов, монополий, госдолга, судьбы малого бизнеса (ведущие — экономисты О. Комолов, Р. Абдулов, А. Сафронов, А.",
+  "legal_form": "политэкономия / аналитика"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UC4Cap1xVy2waDXfzM5ka6lg"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №46",
+  "notes": "Совпадает по теме или формату: Один в один наш подход: «в чьих интересах? для какого класса?» — критическая политэкономия без академизма.. Проверено: GET https://www.youtube.com/channel/UC4Cap1xVy2waDXfzM5ka6lg → HTTP 200, &lt;title&gt;«Простые числа - YouTube»&gt;, есть channelMetadataRenderer; yt-dlp: chan"
+ }
+}

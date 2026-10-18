@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-028",
+ "asserted": false,
+ "identity": {
+  "name": "Международная координация революционных партий и организаций (ИКОР)",
+  "status": "Международная структура революционных партий и организаций: по данным самой структуры — более 60 организаций из почти 50 стран.",
+  "legal_form": "Международный формат"
+ },
+ "channels": {
+  "site": "https://icor.info/ru"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Международные партии и форматы",
+  "page_status": "Контакт не установлен",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №28",
+  "notes": "Проверяем, совпадают ли их программные документы с нашей линией. Контакта нет."
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-134",
+ "asserted": false,
+ "identity": {
+  "name": "РКП(и) — Российская коммунистическая партия (интернационалистов)",
+  "status": "Официальный канал РКП(и); до июля 2024 — «Красный поворот». Сайт rkpi.info.",
+  "legal_form": "Несистемная коммунистическая партия"
+ },
+ "channels": {
+  "site": "https://t.me/rkp_i"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Telegram-каналы и блоги",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №134",
+  "notes": "Действующая непарламентская компартия с сайтом и программной работой."
+ }
+}

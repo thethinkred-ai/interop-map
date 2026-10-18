@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-147",
+ "asserted": false,
+ "identity": {
+  "name": "Мы из СССР | История",
+  "status": "Крупный исторический канал о советском периоде — архивные материалы, факты, история СССР.",
+  "legal_form": "Историко-просветительский канал"
+ },
+ "channels": {
+  "site": "https://t.me/sssr_history2"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Telegram-каналы и блоги",
+  "page_status": "Контакт не установлен",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №147",
+  "notes": "Массовый историко-просветительский ресурс; линия скорее ностальгическая, чем марксистская."
+ }
+}

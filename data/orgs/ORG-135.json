@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-135",
+ "asserted": false,
+ "identity": {
+  "name": "Знамя Марксизма | КПР",
+  "status": "Печатный орган Коммунистической Платформы России (КПР) — марксистская платформа, строящая последовательную коммунистическую линию.",
+  "legal_form": "Печатный орган партии"
+ },
+ "channels": {
+  "site": "https://t.me/kpr1917"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Telegram-каналы и блоги",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №135",
+  "notes": "Идейное м-л издание с партийной структурой."
+ }
+}

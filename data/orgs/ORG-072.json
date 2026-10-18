@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-072",
+ "asserted": false,
+ "identity": {
+  "name": "Марксизм-ленинизм / Marxism-leninism",
+  "status": "Канал с публикацией аудиокниг, работ и статей классиков марксизма-ленинизма, а также переводов марксистских роликов с русского на английский.",
+  "legal_form": "Аудиобиблиотека/переводы"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UCebgcXU_EyX2_P_Ww-qeVWA"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №72",
+  "notes": "Совпадает по теме или формату: Аудиобиблиотека/переводы · Россия. Проверено: yt-dlp, 2660 подписчиков, 11 октября 2026."
+ }
+}

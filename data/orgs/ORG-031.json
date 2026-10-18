@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-031",
+ "asserted": false,
+ "identity": {
+  "name": "АИСТ (anti-imperialism.by)",
+  "status": "Информационный ресурс о международной борьбе против империализма; заявляет марксизм-ленинизм основой анализа.",
+  "legal_form": "Информационный проект"
+ },
+ "channels": {
+  "site": "https://anti-imperialism.by/"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Медиа-проекты и площадки",
+  "page_status": "Изучаем взаимодействие",
+  "page_category": "B",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №31",
+  "notes": "Разбор готов 09.10.2026. Совпадаем по методу, различаемся по задачам: у нас образование, у них информационный фронт."
+ }
+}

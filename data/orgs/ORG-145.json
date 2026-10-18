@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-145",
+ "asserted": false,
+ "identity": {
+  "name": "Вайлдберриз. Правда сотрудников",
+  "status": "Освещение проблем работников Wildberries/РВБ, популяризация профсоюзных идей, помощь в создании профорганизаций.",
+  "legal_form": "Рабочий канал / профсоюзная самоорганизация"
+ },
+ "channels": {
+  "site": "https://t.me/wb_pravda_sotrudnikov"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Telegram-каналы и блоги",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №145",
+  "notes": "Живая рабочая самоорганизация на крупнейшем маркетплейсе."
+ }
+}

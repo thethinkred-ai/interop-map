@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-123",
+ "asserted": false,
+ "identity": {
+  "name": "Политпросвет.kz",
+  "status": "Авторский канал журналистки Мадины Аимбетовой о казахстанской политике с просветительским разворотом.",
+  "legal_form": "Авторский политпросвет-канал"
+ },
+ "channels": {
+  "site": "https://t.me/politprosvet_kz"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Telegram-каналы и блоги",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №123",
+  "notes": "Региональный политический разбор Казахстана — заполняет пробел по Центральной Азии."
+ }
+}

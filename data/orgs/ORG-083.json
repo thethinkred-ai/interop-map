@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-083",
+ "asserted": false,
+ "identity": {
+  "name": "Рабочий Университет",
+  "status": "Канал Рабочего университета им. И. Б. Хлебникова: видеозаписи лекций, международные обзоры А. В. Харламенко, озвученные фильмы.",
+  "legal_form": "Образовательный проект"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UCbHNkdlj7H1Z8_-mVA4JKFg"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №83",
+  "notes": "Совпадает по теме или формату: Образовательный проект · Россия. Проверено: yt-dlp, 15200 подписчиков, 11 октября 2026."
+ }
+}

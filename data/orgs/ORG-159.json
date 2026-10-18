@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-159",
+ "asserted": false,
+ "identity": {
+  "name": "Марксизм-ленинизм: Начальный уровень (Stepik)",
+  "status": "Бесплатный онлайн-курс на Stepik по основам марксизма-ленинизма. Прямой аналог ThinkRed по площадке (Stepik) и формату (самостоятельное прохождение, модули).",
+  "legal_form": "независимый автор/команда на Stepik"
+ },
+ "channels": {
+  "site": "https://stepik.org/course/234963/promo"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Образовательные проекты и школы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №159",
+  "notes": "Совпадает по теме или формату: Тот же хостинг (stepik), тот же входной уровень. Проверено: HTTP 200; title: «Марксизм-ленинизм: Начальный уровень, Бесплатно — Stepik» (проверено web_extract; прямой curl блокируется WAF Stepik)"
+ }
+}

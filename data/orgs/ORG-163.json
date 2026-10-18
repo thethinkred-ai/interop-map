@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-163",
+ "asserted": false,
+ "identity": {
+  "name": "Marxist Education Project (MEP)",
+  "status": "Классы, читательские группы, панельные дискуссии и книжные презентации по марксизму и антикапиталистическим традициям; в т.ч. Marx&#x27;s Capital, Volume I — A Short Course on Capitalist Production.",
+  "legal_form": "Marxist Education Project (некоммерческий образовательный проект)"
+ },
+ "channels": {
+  "site": "https://marxedproject.org/"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Образовательные проекты и школы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №163",
+  "notes": "Совпадает по теме или формату: Курсы и ридинг-группы по первоисточникам. Проверено: HTTP 200; title «Home - Marxist Education Project»; страница multi-session classes — 200"
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-002",
+ "asserted": false,
+ "identity": {
+  "name": "«Коммунисты России»",
+  "status": "Зарегистрированная партия: создана в 2009 году как движение, партией стала в 2012-м. В открытых источниках её называют партией-спойлером КПРФ.",
+  "legal_form": "Системная парламентская"
+ },
+ "channels": {
+  "site": "https://ru.wikipedia.org/wiki/Коммунисты_России"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Системные структуры",
+  "page_status": "Расхождения по методу",
+  "page_category": "C",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №2",
+  "notes": "Публично конкурирует с КПРФ за один электорат; практики работы в трудовых конфликтах не видно."
+ }
+}

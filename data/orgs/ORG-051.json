@@ -1,0 +1,28 @@
+{
+ "schema_version": "1.0",
+ "id": "ORG-051",
+ "asserted": false,
+ "identity": {
+  "name": "Альтернативы",
+  "status": "Канал журнала «Альтернативы» — теоретические лекции и курсы по современному марксизму (напр. «Логика диалектики „Капитала“»), политэкономия, диалог с КНР.",
+  "legal_form": "теоретический журнал / современный марксизм"
+ },
+ "channels": {
+  "site": "https://www.youtube.com/channel/UCagq4WmEo-6wUuB6cLFXzdg"
+ },
+ "positions": [],
+ "activities": [],
+ "cooperation": {},
+ "visibility": {
+  "level": "public",
+  "contacts_public": false
+ },
+ "meta": {
+  "list_section": "Русскоязычные YouTube-каналы",
+  "page_status": "Наблюдаем",
+  "page_category": "D",
+  "date_checked": "17-10-2026",
+  "source": "thinkred.ru/cooperation (снимок 2026-10-17), карточка №51",
+  "notes": "Совпадает по теме или формату: Академическая глубина по диалектике «капитала» — прямое пересечение с нашим курсом.. Проверено: GET канала → HTTP 200, &lt;title&gt;«Альтернативы - YouTube»&gt;; yt-dlp: подписчиков 20000. Видео: «Место диалектики в научной методологии. Введение // Курс:"
+ }
+}
