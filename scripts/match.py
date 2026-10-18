@@ -15,23 +15,12 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from validate import load_orgs, ROOT  # noqa: E402
+from interop_common import acts_of, shared_acts, hypothetical_formats  # noqa: E402
 
 TAX = json.load(open(os.path.join(ROOT, 'taxonomy.json'), encoding='utf-8'))
 TOPIC = TAX['position_topic_labels']
 FMT = TAX['interaction_format_labels']
 ACT = TAX['activity_type_labels']
-
-# правила: общая деятельность → рекомендованный формат первого проекта
-ACTIVITY_FORMAT = [
-    ({'labour_conflicts', 'trade_unions'}, 'labour_monitoring_exchange'),
-    ({'publishing', 'media'}, 'exchange_publications'),
-    ({'research'}, 'joint_analytics'),
-    ({'education'}, 'joint_seminar'),
-    ({'translation'}, 'translation_project'),
-    ({'library_archive'}, 'joint_collection'),
-    ({'events'}, 'open_discussion'),
-    ({'software'}, 'caos_shared_goal'),
-]
 
 
 def fmt_list(items):
@@ -53,13 +42,16 @@ def match(a, b):
         'a_source': (pa[t].get('sources') or [{}])[0].get('url'),
         'b_source': (pb[t].get('sources') or [{}])[0].get('url'),
     } for t in both]
-    acts_a = {x.get('type') for x in a.get('activities') or []}
-    acts_b = {x.get('type') for x in b.get('activities') or []}
-    common_acts = sorted(acts_a & acts_b)
+    acts_all_a = acts_of(a)
+    acts_all_b = acts_of(b)
+    common_acts = shared_acts(a, b)
+    common_declared = sorted({x.get('type') for x in a.get('activities') or []}
+                             & {x.get('type') for x in b.get('activities') or []})
+    hyp = hypothetical_formats(a, b)
     formats = list(complement)
-    for pair, fmt in ACTIVITY_FORMAT:
-        if pair & acts_a and pair & acts_b and fmt not in formats:
-            formats.append(fmt)
+    for f in hyp:
+        if f not in formats:
+            formats.append(f)
     if not formats:
         formats = ['open_discussion']
     open_questions = []
@@ -75,9 +67,11 @@ def match(a, b):
         'names': [a['identity']['name'], b['identity']['name']],
         'asserted': [a.get('asserted'), b.get('asserted')],
         'complementary_formats': complement,
+        'hypothetical_formats': hyp,
+        'shared_activities_all': [ACT.get(x, x) for x in common_acts],
         'shared_positions': positions,
         'shared_positions_count': len(both),
-        'common_activities': [ACT.get(x, x) for x in common_acts],
+        'common_activities': [ACT.get(x, x) for x in common_declared],
         'recommended_formats': [FMT.get(f, f) for f in formats],
         'open_questions': open_questions,
         'draft_letter': draft_letter(a, b, formats, common_acts),
@@ -133,9 +127,14 @@ def render_text(r):
         L.append('      %s' % (p['b_source'] or ''))
         L.append('    → сопоставление формулировок остаётся за читателем; расхождение — предмет разговора, не приговор')
     L.append('')
-    L.append('▌ Общая деятельность: ' + (', '.join(r['common_activities']) or 'не заявлена'))
+    L.append('▌ Общая деятельность (заявленная): ' + (', '.join(r['common_activities']) or 'не заявлена'))
     L.append('')
-    L.append('▌ Рекомендованные форматы первого проекта:')
+    L.append('▌ Гипотетический слой (по ролям организаций, не по заявлениям):')
+    L.append('  возможные форматы: ' + (', '.join(FMT.get(f, f) for f in r['hypothetical_formats']) if r['hypothetical_formats'] else 'не найдено'))
+    L.append('  общие сферы (вкл. выведенные): ' + (', '.join(r['shared_activities_all']) or 'не найдено'))
+    L.append('  → это гипотеза для первого разговора, а не факт и не оценка совместимости')
+    L.append('')
+    L.append('▌ Рекомендованные форматы первого проекта (заявленное + возможное):')
     for f in r['recommended_formats']:
         L.append('  - %s' % f)
     L.append('')

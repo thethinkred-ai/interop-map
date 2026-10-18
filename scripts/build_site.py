@@ -12,6 +12,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from validate import load_orgs, ROOT  # noqa: E402
+from interop_common import SECTION_ACTS, FMT_MATRIX  # noqa: E402
 
 TAX = json.load(open(os.path.join(ROOT, 'taxonomy.json'), encoding='utf-8'))
 
@@ -22,24 +23,34 @@ CAT_LABELS = {'A': 'первоочередной контакт', 'B': 'перс
 COOPERATIVE_LINKS = {'joint_project', 'coalition', 'publication_exchange', 'joint_event',
                      'international_network'}
 
-# Гипотетический слой: сферы деятельности черновиков выводятся из раздела списка.
-# Это оценка «кто они есть», а не заявление организации — на витрине помечается.
-SECTION_ACTS = {
-    'Системные структуры': ['party_politics'],
-    'Несистемные коммунистические партии и движения': ['party_politics', 'grassroots_politics'],
-    'Несистемные левые и социалистические': ['grassroots_politics', 'party_politics'],
-    'Молодёжные организации': ['grassroots_politics', 'education'],
-    'Профсоюзы и рабочие объединения': ['trade_unions', 'labour_conflicts'],
-    'Международные партии и форматы': ['party_politics', 'events'],
-    'Медиа-проекты и площадки': ['media', 'publishing'],
-    'Русскоязычные YouTube-каналы': ['media', 'publishing'],
-    'Зарубежные каналы и медиапроекты': ['media', 'translation'],
-    'Telegram-каналы и блоги': ['media'],
-    'Библиотеки и архивы первоисточников': ['library_archive', 'publishing'],
-    'Образовательные проекты и школы': ['education', 'research'],
-    'ВКонтакте: сообщества': ['media', 'grassroots_politics'],
-    'Страны СНГ: организации и проекты': ['grassroots_politics', 'party_politics'],
-}
+
+def load_cards():
+    """Карточки исследований по организациям: {org_id: [карточки]}."""
+    cards_dir = os.path.join(ROOT, 'data', 'cards')
+    out = {}
+    if not os.path.isdir(cards_dir):
+        return out
+    for fn in sorted(os.listdir(cards_dir)):
+        if not fn.endswith('.jsonl'):
+            continue
+        for line in open(os.path.join(cards_dir, fn), encoding='utf-8'):
+            if not line.strip():
+                continue
+            try:
+                c = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            out.setdefault(c.get('org_id'), []).append({
+                'researcher': (c.get('researcher') or {}).get('name') or '—',
+                'date': c.get('date') or '',
+                'confidence': c.get('confidence') or '',
+                'completeness': c.get('completeness') or '',
+                'summary': (c.get('summary') or '')[:400],
+                'priority': (c.get('priority') or {}).get('category') or '',
+                'priority_reason': (c.get('priority') or {}).get('reason') or '',
+                'assessments': c.get('assessments') or {},
+            })
+    return out
 
 
 def bundle():
@@ -69,7 +80,8 @@ def bundle():
     conns = json.load(open(os.path.join(ROOT, 'data', 'connections.json'), encoding='utf-8'))
     links = [{'p': c.get('participants'), 't': c.get('type'),
               'coop': c.get('type') in COOPERATIVE_LINKS} for c in conns]
-    return {'orgs': orgs, 'connections': links, 'tax': TAX,
+    return {'orgs': orgs, 'connections': links, 'tax': TAX, 'cards': load_cards(),
+            'fmtMatrix': FMT_MATRIX,
             'updated': '2026-10-18'}
 
 
@@ -234,32 +246,7 @@ function actsOf(o){
 }
 
 /* ---------- матрица «роль × роль → возможный формат» (гипотетический слой) ---------- */
-var FMT_MATRIX = [
-  [['education','media'],            'joint_seminar'],
-  [['education','publishing'],       'joint_collection'],
-  [['education','library_archive'],  'joint_collection'],
-  [['education','education'],        'joint_seminar'],
-  [['education','trade_unions'],     'joint_seminar'],
-  [['education','labour_conflicts'], 'joint_seminar'],
-  [['education','research'],         'joint_analytics'],
-  [['media','media'],                'exchange_publications'],
-  [['media','publishing'],           'exchange_publications'],
-  [['media','labour_conflicts'],     'labour_monitoring_exchange'],
-  [['media','trade_unions'],         'labour_monitoring_exchange'],
-  [['media','translation'],          'translation_project'],
-  [['publishing','library_archive'], 'joint_collection'],
-  [['publishing','translation'],     'translation_project'],
-  [['research','party_politics'],    'joint_analytics'],
-  [['research','research'],          'comparative_research'],
-  [['trade_unions','party_politics'],'joint_campaign'],
-  [['trade_unions','labour_conflicts'],'labour_monitoring_exchange'],
-  [['events','media'],               'joint_seminar'],
-  [['events','events'],              'conference'],
-  [['software','education'],         'caos_shared_goal'],
-  [['software','grassroots_politics'],'caos_shared_goal'],
-  [['software','party_politics'],    'caos_shared_goal'],
-  [['translation','library_archive'],'translation_project']
-];
+var FMT_MATRIX = DATA.fmtMatrix;
 
 /* ---------- гипотетический потенциал пары (не вердикт, а оценка «что возможно») ---------- */
 function scorePair(a, b){
@@ -414,6 +401,23 @@ function drawMap(){
       if(sc.capNote) h += '<div style="margin-top:6px;color:#b45309">'+sc.capNote+'.</div>';
       if(sc.conflict) h += '<div style="margin-top:6px;color:#b91c1c">Зафиксирован публичный конфликт (в потенциал не входит, показан для полноты).</div>';
       h += '<div style="margin-top:10px"><button onclick="toMatch(\\''+center.id+'\\', \\''+o.id+'\\')" style="padding:7px 14px;background:var(--red);color:#fff;border:0;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer">Матч-отчёт '+center.name.slice(0,14)+' ↔ '+o.name.slice(0,14)+'</button></div>';
+      var cards = DATA.cards[o.id] || [];
+      if(cards.length){
+        h += '<div style="margin-top:14px;border-top:1px dashed var(--border);padding-top:10px"><b>Что установили наши исследователи</b></div>';
+        cards.forEach(function(c){
+          var AX=[['ideological_compatibility','Идейная'],['practical_compatibility','Практическая'],['mutual_benefit','Полезность'],['confirmed_activity','Активность'],['contact_accessibility','Доступность']];
+          var ax = AX.map(function(x){var v=c.assessments[x[0]];return x[1]+': '+(v===null||v===undefined?'Н/Д':v+'/4');}).join(' · ');
+          var cl={high:'высокая',medium:'средняя',low:'низкая'}[c.confidence]||c.confidence;
+          var pl={high:'высокая',medium:'средняя',low:'низкая'}[c.completeness]||c.completeness;
+          h += '<details style="margin-top:8px"><summary style="cursor:pointer;font-size:13px;color:var(--red)">Карточка · '+esc(c.researcher)+' · '+esc(c.date)+'</summary>'
+            + '<div style="margin-top:6px;font-size:13px;line-height:1.55">'
+            + '<div><b>Оценки исследователя:</b> '+ax+'</div>'
+            + '<div><b>Приоритет:</b> '+(c.priority?('Кат. '+c.priority):'—')+(c.priority_reason?' — '+esc(c.priority_reason):'')+'</div>'
+            + '<div><b>Достоверность:</b> '+cl+' · <b>полнота:</b> '+pl+'</div>'
+            + '<div style="margin-top:4px">'+esc(c.summary)+'</div>'
+            + '</div></details>';
+        });
+      }
       p.innerHTML = h; p.style.display='block';
     });
   });
