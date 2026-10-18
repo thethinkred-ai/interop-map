@@ -183,6 +183,10 @@ footer{margin:40px 0 30px;color:var(--muted);font-size:13px;border-top:1px solid
         <select id="centerSel"></select>
         <span style="font-size:13px;color:var(--muted)">в центре</span>
       </div>
+      <div class="mapctl">
+        <input id="limitN" type="range" min="10" max="__MAXN__" step="1" value="60" style="flex:1;min-width:240px;accent-color:var(--red)">
+        <span style="font-size:13px;color:var(--muted);min-width:170px">показывать: <b id="limitVal">60</b> из <span id="limitMax"></span> ближайших</span>
+      </div>
       <svg id="layout" viewBox="0 0 1000 700" role="img" aria-label="Организациоцентричная карта взаимодействия"></svg>
       <div class="legend">
         <span><i style="background:#c8102e"></i>организация в центре</span>
@@ -356,9 +360,12 @@ function drawMap(){
   var svg = document.getElementById('layout');
   var cx=500, cy=390, Rmin=95, Rmax=345;
   var center = byId[document.getElementById('centerSel').value];
+  var N = parseInt(document.getElementById('limitN').value, 10) || 60;
+  document.getElementById('limitVal').textContent = N;
   var others = DATA.orgs.filter(function(o){return o.id!==center.id && !o.restricted;});
-  var scored = others.map(function(o){return {o:o, sc:scorePair(center, o)};});
-  scored.sort(function(x,y){return y.sc.score-x.sc.score || (x.o.name<y.o.name?-1:1);});
+  var scoredAll = others.map(function(o){return {o:o, sc:scorePair(center, o)};});
+  scoredAll.sort(function(x,y){return y.sc.score-x.sc.score || (x.o.name<y.o.name?-1:1);});
+  var scored = scoredAll.slice(0, N);
   // радиус нормируется к максимальному потенциалу текущего выбора — точки расходятся по всей площади
   var smax = 0;
   scored.forEach(function(it){ if(it.sc.score>smax) smax=it.sc.score; });
@@ -417,6 +424,8 @@ function toMatch(aid, bid){
   document.querySelector('.match').scrollIntoView({behavior:'smooth'});
 }
 document.getElementById('centerSel').addEventListener('change', drawMap);
+document.getElementById('limitN').addEventListener('input', drawMap);
+document.getElementById('limitMax').textContent = DATA.orgs.filter(function(o){return !o.restricted;}).length - 1;
 
 /* ---------- виды и список ---------- */
 function showView(v){
@@ -468,7 +477,8 @@ def main():
     html = (HTML
             .replace('__BUNDLE__', json.dumps(b, ensure_ascii=False))
             .replace('__CATC__', json.dumps(CAT_COLORS, ensure_ascii=False))
-            .replace('__CATL__', json.dumps(CAT_LABELS, ensure_ascii=False)))
+            .replace('__CATL__', json.dumps(CAT_LABELS, ensure_ascii=False))
+            .replace('__MAXN__', str(sum(1 for o in b['orgs'] if not o.get('restricted')) - 1)))
     out = os.path.join(ROOT, 'docs', 'index.html')
     os.makedirs(os.path.dirname(out), exist_ok=True)
     open(out, 'w', encoding='utf-8').write(html)
