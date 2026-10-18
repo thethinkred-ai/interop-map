@@ -192,8 +192,8 @@ footer{margin:40px 0 30px;color:var(--muted);font-size:13px;border-top:1px solid
         <span><i style="background:#dc2626"></i>публичный конфликт</span>
       </div>
       <div id="panel"></div>
-      <p class="mapnote">Карта строится по <b>гипотетическому потенциалу</b> — какие форматы взаимодействия возможны для пары, судя по их ролям (образование, медиа, профсоюзы, библиотека…; для черновиков сферы выведены из раздела списка), усиленному заявленным в паспортах: возможные форматы по ролям (+1 за формат, до 5), общие сферы (+0.5, до 1.5), заявленная взаимодополняемость «предлагаю × ищу» (+2, до 6), общие темы с утверждёнными обеими сторонами позициями (+0.5, до 2.5), подтверждённая связь (+2), оба паспорта утверждены (+0.5); максимум нормируется к 10. Заявленные политические ограничения учитываются там, где существуют (статусы карты ThinkRed: «расхождения по методу» ограничивают потенциал точечными кампаниями, «не взаимодействуем» — почти обнуляют).
-      Это гипотеза для первого разговора, а не факт сотрудничества и не оценка политической совместимости: реальную совместимость устанавливают только сами организации.</p>
+      <p class="mapnote">Карта строится по <b>гипотетическому потенциалу</b> — какие форматы взаимодействия возможны для пары, судя по их ролям (образование, медиа, профсоюзы, библиотека…; для черновиков сферы выведены из раздела списка), усиленному заявленным в паспортах: возможные форматы по ролям (+2 за формат, до 6), общие сферы (+1, до 4), заявленная взаимодополняемость «предлагаю × ищу» (+2, до 6), общие темы с утверждёнными обеими сторонами позициями (+1, до 3), подтверждённая связь (+2), оба паспорта утверждены (+1); нормировка к 10. Заявленные политические ограничения учитываются как потолок (статусы карты ThinkRed: «расхождения по методу» ограничивают потенциал точечными кампаниями, «не взаимодействуем» — почти обнуляют).
+      Радиус нормируется к самой близкой организации текущего выбора — кольца подписаны фактическими значениями потенциала. Это гипотеза для первого разговора, а не факт сотрудничества и не оценка политической совместимости: реальную совместимость устанавливают только сами организации.</p>
     </div>
   </div>
 
@@ -269,10 +269,10 @@ function scorePair(a, b){
       if(hypFormats.indexOf(rule[1])<0) hypFormats.push(rule[1]);
     }
   });
-  if(hypFormats.length) brk.push({label:'Возможные форматы по ролям (гипотеза): '+hypFormats.map(function(f){return FMT[f]||f;}).join(', '), pts:Math.min(5, hypFormats.length)});
+  if(hypFormats.length) brk.push({label:'Возможные форматы по ролям (гипотеза): '+hypFormats.map(function(f){return FMT[f]||f;}).join(', '), pts:Math.min(6, 2*hypFormats.length)});
   // 2) общие сферы — потенциал «ровесного» сотрудничества
   var sharedActs = Object.keys(A).filter(function(x){return B[x];});
-  if(sharedActs.length) brk.push({label:'Общие сферы деятельности: '+sharedActs.map(function(x){return ACT[x]||x;}).join(', '), pts:Math.min(1.5, 0.5*sharedActs.length)});
+  if(sharedActs.length) brk.push({label:'Общие сферы деятельности: '+sharedActs.map(function(x){return ACT[x]||x;}).join(', '), pts:Math.min(4, sharedActs.length)});
   // 3) заявленная взаимодополняемость (факт, усиливает гипотезу)
   var nA={}, nB={};
   (a.offers||[]).forEach(function(x){nA[x[0]]=1;}); (b.seeks||[]).forEach(function(x){nB[x[0]]=1;});
@@ -286,12 +286,12 @@ function scorePair(a, b){
   (a.positions||[]).forEach(function(p){if(p[1]==='asserted')pa[p[0]]=1;});
   (b.positions||[]).forEach(function(p){if(p[1]==='asserted')pb[p[0]]=1;});
   var shared = Object.keys(pa).filter(function(t){return pb[t];});
-  if(shared.length) brk.push({label:'Общие темы с утверждёнными обеими сторонами позициями: '+shared.length, pts:Math.min(2.5, 0.5*shared.length)});
+  if(shared.length) brk.push({label:'Общие темы с утверждёнными обеими сторонами позициями: '+shared.length, pts:Math.min(3, shared.length)});
   // 5) связь
   var link = linkBetween(a.id, b.id);
   if(link && link.coop) brk.push({label:'Подтверждённая кооперативная связь', pts:2});
   // 6) утверждённость паспортов
-  if(a.asserted && b.asserted) brk.push({label:'Оба паспорта утверждены организациями', pts:0.5});
+  if(a.asserted && b.asserted) brk.push({label:'Оба паспорта утверждены организациями', pts:1});
   var raw = brk.reduce(function(s,x){return s+x.pts;},0);
   // 7) заявленные политические ограничения (только политики ThinkRed, где применимы)
   var cap = 10, capNote = null;
@@ -301,9 +301,9 @@ function scorePair(a, b){
     if(/Не взаимодействуем/i.test(x.page_status||'')){ cap=1.5; capNote='Политика ThinkRed: «не взаимодействуем» — потенциал ограничен'; }
     else if(/Расхождения по методу/i.test(x.page_status||'')){ cap=4; capNote='Политика ThinkRed: «расхождения по методу» — только точечные кампании'; }
   }
-  var score = Math.round(Math.min(cap, raw/18.5*10)*10)/10;
+  var score = Math.round(Math.min(cap, raw/22*10)*10)/10;
   return {score:score, brk:brk, link:link, conflict:link&&!link.coop,
-          hypFormats:hypFormats, capNote:capNote, capped:score>=cap&&raw/18.5*10>cap};
+          hypFormats:hypFormats, capNote:capNote, capped:score>=cap&&raw/22*10>cap};
 }
 
 /* ---------- матч-отчёт ---------- */
@@ -354,33 +354,46 @@ function doMatch(){
 var GOLD = 2.399963;
 function drawMap(){
   var svg = document.getElementById('layout');
-  var cx=500, cy=350, Rmin=78, Rmax=300;
+  var cx=500, cy=390, Rmin=95, Rmax=345;
   var center = byId[document.getElementById('centerSel').value];
   var others = DATA.orgs.filter(function(o){return o.id!==center.id && !o.restricted;});
   var scored = others.map(function(o){return {o:o, sc:scorePair(center, o)};});
-  scored.sort(function(x,y){return y.sc.score-x.sc.score || (x.o.name<y.name?-1:1);});
+  scored.sort(function(x,y){return y.sc.score-x.sc.score || (x.o.name<y.o.name?-1:1);});
+  // радиус нормируется к максимальному потенциалу текущего выбора — точки расходятся по всей площади
+  var smax = 0;
+  scored.forEach(function(it){ if(it.sc.score>smax) smax=it.sc.score; });
+  smax = Math.max(smax, 2);
+  var pos = function(s){ return Rmin + (1 - Math.min(1, s/smax))*(Rmax-Rmin); };
   var parts = [];
-  var ringDefs = [[10,'#f1f5f9'],[7.5,'#f1f5f9'],[5,'#f8fafc'],[2.5,'#f8fafc']];
-  ringDefs.forEach(function(rd){
-    var r = Rmin + (1 - rd[0]/10)*(Rmax-Rmin);
+  // кольца с фактическими значениями (по нормированной шкале)
+  [1, 0.75, 0.5, 0.25].forEach(function(fr, idx){
+    var val = Math.round(smax*fr*10)/10;
+    var r = pos(smax*fr);
     parts.push('<circle cx="'+cx+'" cy="'+cy+'" r="'+r.toFixed(1)+'" fill="none" stroke="#e5e7eb" stroke-dasharray="3 5"/>');
-    parts.push('<text class="ringlbl" x="'+(cx+r+4)+'" y="'+(cy-4)+'">'+(rd[0]===10?'потенциал 10':'потенциал '+rd[0])+'</text>');
+    var lx = cx + r*0.7071 + 6, ly = cy - r*0.7071 - 6;
+    parts.push('<text class="ringlbl" x="'+lx.toFixed(1)+'" y="'+ly.toFixed(1)+'">'+val+'</text>');
   });
-  parts.push('<line x1="'+(cx-Rmax-10)+'" y1="'+cy+'" x2="'+(cx+Rmax+10)+'" y2="'+cy+'" stroke="#eef0f3"/>');
-  parts.push('<line x1="'+cx+'" y1="'+(cy-Rmax-10)+'" x2="'+cx+'" y2="'+(cy+Rmax+10)+'" stroke="#eef0f3"/>');
+  parts.push('<line x1="'+(cx-Rmax-12)+'" y1="'+cy+'" x2="'+(cx+Rmax+12)+'" y2="'+cy+'" stroke="#eef0f3"/>');
+  parts.push('<line x1="'+cx+'" y1="'+(cy-Rmax-12)+'" x2="'+cx+'" y2="'+(cy+Rmax+12)+'" stroke="#eef0f3"/>');
+  var labeled = 0;
   scored.forEach(function(it, i){
     var s = it.sc.score;
-    var r = Rmin + (1 - s/10)*(Rmax-Rmin);
+    var r = pos(s);
+    var jr = r + ((i%7)-3)*5;                       // разброс по радиусу против слипания
     var ang = i * GOLD;
-    var x = cx + r*Math.cos(ang), y = cy + r*Math.sin(ang)*0.92;
+    var x = cx + jr*Math.cos(ang), y = cy + jr*Math.sin(ang)*0.94;
     var fill = it.o.asserted ? '#16a34a' : '#9ca3af';
     if(it.sc.link) fill = it.sc.link.coop ? '#f59e0b' : '#dc2626';
+    var rad = it.o.asserted ? 8 : 6;
+    var showLbl = s>0 && labeled<22;
+    if(showLbl) labeled++;
     parts.push('<g class="node" data-id="'+it.o.id+'">'
-      + '<circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="'+(it.o.asserted?7:5)+'" fill="'+fill+'" opacity="0.9"><title>'+it.o.name+' — '+s+'/10</title></circle>'
-      + (i<12 ? '<text x="'+(x+9).toFixed(1)+'" y="'+(y+4).toFixed(1)+'">'+it.o.name.slice(0,26)+'</text>' : '')
+      + '<circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="'+rad+'" fill="'+fill+'" stroke="#fff" stroke-width="1.5" opacity="0.92"><title>'+it.o.name+' — потенциал '+s+'/10</title></circle>'
+      + (showLbl ? '<text x="'+(x+11).toFixed(1)+'" y="'+(y+4).toFixed(1)+'" style="font-weight:'+(it.o.asserted?'700':'400')+'">'+it.o.name.slice(0,30)+'</text>' : '')
       + '</g>');
   });
-  parts.push('<g><circle cx="'+cx+'" cy="'+cy+'" r="15" fill="#c8102e"/><circle cx="'+cx+'" cy="'+cy+'" r="15" fill="none" stroke="#fff" stroke-width="2.5"/><text x="'+(cx+20)+'" y="'+(cy+5)+'" style="font-size:13px;font-weight:700;fill:#1a1a2e;paint-order:stroke;stroke:#fff;stroke-width:3px">'+center.name.slice(0,34)+'</text></g>');
+  parts.push('<g><circle cx="'+cx+'" cy="'+cy+'" r="17" fill="#c8102e"/><circle cx="'+cx+'" cy="'+cy+'" r="17" fill="none" stroke="#fff" stroke-width="2.5"/><text x="'+(cx+24)+'" y="'+(cy+5)+'" style="font-size:14px;font-weight:700;fill:#1a1a2e;paint-order:stroke;stroke:#fff;stroke-width:3px">'+center.name.slice(0,34)+'</text></g>');
+  svg.setAttribute('viewBox', '0 0 1000 780');
   svg.innerHTML = parts.join('');
   Array.prototype.forEach.call(svg.querySelectorAll('.node'), function(g){
     g.addEventListener('click', function(){
